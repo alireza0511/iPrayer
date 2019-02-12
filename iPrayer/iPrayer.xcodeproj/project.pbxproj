@@ -1,0 +1,871 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3409438521FEC54F00720C49 /* UserPleadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409438421FEC54F00720C49 /* UserPleadsViewController.swift */; };
+		341A8401220E8088008BFD45 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341A8400220E8088008BFD45 /* Constants.swift */; };
+		3421098F21FCCB8800C6B220 /* SingletonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421098E21FCCB8800C6B220 /* SingletonClass.swift */; };
+		3421099121FEA94300C6B220 /* UserPleadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421099021FEA94300C6B220 /* UserPleadCollectionViewCell.swift */; };
+		3421099321FEC20800C6B220 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421099221FEC20800C6B220 /* TestCell.swift */; };
+		343863A121EFFD5A00EE129A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343863A021EFFD5A00EE129A /* AppDelegate.swift */; };
+		343863A321EFFD5A00EE129A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343863A221EFFD5A00EE129A /* SignInViewController.swift */; };
+		343863A621EFFD5A00EE129A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343863A421EFFD5A00EE129A /* Main.storyboard */; };
+		343863A921EFFD5A00EE129A /* iPrayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 343863A721EFFD5A00EE129A /* iPrayer.xcdatamodeld */; };
+		343863AB21EFFD5E00EE129A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343863AA21EFFD5E00EE129A /* Assets.xcassets */; };
+		343863AE21EFFD5E00EE129A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343863AC21EFFD5E00EE129A /* LaunchScreen.storyboard */; };
+		343863B921EFFD5E00EE129A /* iPrayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343863B821EFFD5E00EE129A /* iPrayerTests.swift */; };
+		343863C421EFFD5E00EE129A /* iPrayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343863C321EFFD5E00EE129A /* iPrayerUITests.swift */; };
+		3489E71621F6E0D5002FF7A9 /* PrayRequest+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */; };
+		3489E71821F8F6B0002FF7A9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71721F8F6B0002FF7A9 /* DataController.swift */; };
+		3489E71A21F92AA4002FF7A9 /* AddPleadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71921F92AA4002FF7A9 /* AddPleadViewController.swift */; };
+		3489E71E21F971D6002FF7A9 /* PeoplePleadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71D21F971D6002FF7A9 /* PeoplePleadViewController.swift */; };
+		349936342203F0EC00985F75 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349936332203F0EC00985F75 /* CardDetailViewController.swift */; };
+		3499DD7921FF6B070037A00B /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499DD7821FF6B070037A00B /* FirebaseConstants.swift */; };
+		3499DD7B22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499DD7A22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift */; };
+		34C4327D21F05263000883E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34C4327C21F05262000883E2 /* GoogleService-Info.plist */; };
+		34DF495621F23631000A442A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DF495521F23631000A442A /* TabViewController.swift */; };
+		34DF495921F39593000A442A /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DF495821F39593000A442A /* UserInfoViewController.swift */; };
+		4F074C0E8BFAC089E45F12F9 /* Pods_iPrayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA525EA33DF4395EA41A8A8 /* Pods_iPrayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		343863B521EFFD5E00EE129A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3438639521EFFD5A00EE129A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3438639C21EFFD5A00EE129A;
+			remoteInfo = iPrayer;
+		};
+		343863C021EFFD5E00EE129A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3438639521EFFD5A00EE129A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3438639C21EFFD5A00EE129A;
+			remoteInfo = iPrayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3409438421FEC54F00720C49 /* UserPleadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPleadsViewController.swift; sourceTree = "<group>"; };
+		341A8400220E8088008BFD45 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3421098E21FCCB8800C6B220 /* SingletonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonClass.swift; sourceTree = "<group>"; };
+		3421099021FEA94300C6B220 /* UserPleadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPleadCollectionViewCell.swift; sourceTree = "<group>"; };
+		3421099221FEC20800C6B220 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
+		3438639D21EFFD5A00EE129A /* iPrayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPrayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		343863A021EFFD5A00EE129A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		343863A221EFFD5A00EE129A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		343863A521EFFD5A00EE129A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		343863A821EFFD5A00EE129A /* iPrayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iPrayer.xcdatamodel; sourceTree = "<group>"; };
+		343863AA21EFFD5E00EE129A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		343863AD21EFFD5E00EE129A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		343863AF21EFFD5E00EE129A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		343863B421EFFD5E00EE129A /* iPrayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPrayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		343863B821EFFD5E00EE129A /* iPrayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPrayerTests.swift; sourceTree = "<group>"; };
+		343863BA21EFFD5E00EE129A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		343863BF21EFFD5E00EE129A /* iPrayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPrayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		343863C321EFFD5E00EE129A /* iPrayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPrayerUITests.swift; sourceTree = "<group>"; };
+		343863C521EFFD5E00EE129A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrayRequest+Extra.swift"; sourceTree = "<group>"; };
+		3489E71721F8F6B0002FF7A9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		3489E71921F92AA4002FF7A9 /* AddPleadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPleadViewController.swift; sourceTree = "<group>"; };
+		3489E71D21F971D6002FF7A9 /* PeoplePleadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePleadViewController.swift; sourceTree = "<group>"; };
+		349936332203F0EC00985F75 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		3499DD7821FF6B070037A00B /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
+		3499DD7A22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePleadCollectionViewCell.swift; sourceTree = "<group>"; };
+		34C4327C21F05262000883E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		34DF495521F23631000A442A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		34DF495821F39593000A442A /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		6A3C901F0AF56A045942AFE3 /* Pods-iPrayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPrayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPrayer/Pods-iPrayer.release.xcconfig"; sourceTree = "<group>"; };
+		786935D4B0F4F6319C0944BE /* Pods-iPrayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPrayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPrayer/Pods-iPrayer.debug.xcconfig"; sourceTree = "<group>"; };
+		DAA525EA33DF4395EA41A8A8 /* Pods_iPrayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPrayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3438639A21EFFD5A00EE129A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F074C0E8BFAC089E45F12F9 /* Pods_iPrayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		343863B121EFFD5E00EE129A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		343863BC21EFFD5E00EE129A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3421098C21FAD27900C6B220 /* Managed Object Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */,
+			);
+			path = "Managed Object Extentions";
+			sourceTree = "<group>";
+		};
+		3438639421EFFD5A00EE129A = {
+			isa = PBXGroup;
+			children = (
+				3438639F21EFFD5A00EE129A /* iPrayer */,
+				343863B721EFFD5E00EE129A /* iPrayerTests */,
+				343863C221EFFD5E00EE129A /* iPrayerUITests */,
+				3438639E21EFFD5A00EE129A /* Products */,
+				37F87DA8219D6E0079243002 /* Pods */,
+				81DE73C2D6154F221C1DCA9D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3438639E21EFFD5A00EE129A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3438639D21EFFD5A00EE129A /* iPrayer.app */,
+				343863B421EFFD5E00EE129A /* iPrayerTests.xctest */,
+				343863BF21EFFD5E00EE129A /* iPrayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3438639F21EFFD5A00EE129A /* iPrayer */ = {
+			isa = PBXGroup;
+			children = (
+				343863A021EFFD5A00EE129A /* AppDelegate.swift */,
+				34DF495321F235C8000A442A /* Model */,
+				34DF495721F23DB5000A442A /* View */,
+				34DF495421F235D3000A442A /* Controller */,
+				3489E71421F6D847002FF7A9 /* Storyboard */,
+				3489E71321F6D823002FF7A9 /* Assets */,
+				34C4327C21F05262000883E2 /* GoogleService-Info.plist */,
+				343863AF21EFFD5E00EE129A /* Info.plist */,
+			);
+			path = iPrayer;
+			sourceTree = "<group>";
+		};
+		343863B721EFFD5E00EE129A /* iPrayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				343863B821EFFD5E00EE129A /* iPrayerTests.swift */,
+				343863BA21EFFD5E00EE129A /* Info.plist */,
+			);
+			path = iPrayerTests;
+			sourceTree = "<group>";
+		};
+		343863C221EFFD5E00EE129A /* iPrayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				343863C321EFFD5E00EE129A /* iPrayerUITests.swift */,
+				343863C521EFFD5E00EE129A /* Info.plist */,
+			);
+			path = iPrayerUITests;
+			sourceTree = "<group>";
+		};
+		3489E71321F6D823002FF7A9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				343863AA21EFFD5E00EE129A /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		3489E71421F6D847002FF7A9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				343863A421EFFD5A00EE129A /* Main.storyboard */,
+				343863AC21EFFD5E00EE129A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3499DD7621FF6AC80037A00B /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				3499DD7721FF6AE00037A00B /* Firebase */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		3499DD7721FF6AE00037A00B /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				3499DD7821FF6B070037A00B /* FirebaseConstants.swift */,
+			);
+			name = Firebase;
+			path = "../New Group/Firebase";
+			sourceTree = "<group>";
+		};
+		34DF495321F235C8000A442A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3499DD7621FF6AC80037A00B /* Client */,
+				3421098C21FAD27900C6B220 /* Managed Object Extentions */,
+				343863A721EFFD5A00EE129A /* iPrayer.xcdatamodeld */,
+				3489E71721F8F6B0002FF7A9 /* DataController.swift */,
+				3421098E21FCCB8800C6B220 /* SingletonClass.swift */,
+				341A8400220E8088008BFD45 /* Constants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34DF495421F235D3000A442A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				343863A221EFFD5A00EE129A /* SignInViewController.swift */,
+				34DF495521F23631000A442A /* TabViewController.swift */,
+				34DF495821F39593000A442A /* UserInfoViewController.swift */,
+				3489E71921F92AA4002FF7A9 /* AddPleadViewController.swift */,
+				3489E71D21F971D6002FF7A9 /* PeoplePleadViewController.swift */,
+				3409438421FEC54F00720C49 /* UserPleadsViewController.swift */,
+				349936332203F0EC00985F75 /* CardDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		34DF495721F23DB5000A442A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3421099021FEA94300C6B220 /* UserPleadCollectionViewCell.swift */,
+				3421099221FEC20800C6B220 /* TestCell.swift */,
+				3499DD7A22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37F87DA8219D6E0079243002 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				786935D4B0F4F6319C0944BE /* Pods-iPrayer.debug.xcconfig */,
+				6A3C901F0AF56A045942AFE3 /* Pods-iPrayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		81DE73C2D6154F221C1DCA9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAA525EA33DF4395EA41A8A8 /* Pods_iPrayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3438639C21EFFD5A00EE129A /* iPrayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 343863C821EFFD5E00EE129A /* Build configuration list for PBXNativeTarget "iPrayer" */;
+			buildPhases = (
+				01E8A49B010489D22FA01562 /* [CP] Check Pods Manifest.lock */,
+				3438639921EFFD5A00EE129A /* Sources */,
+				3438639A21EFFD5A00EE129A /* Frameworks */,
+				3438639B21EFFD5A00EE129A /* Resources */,
+				1FE7FC5409C674CDEE239B67 /* [CP] Embed Pods Frameworks */,
+				24A5F543B11F853F95D7A536 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPrayer;
+			productName = iPrayer;
+			productReference = 3438639D21EFFD5A00EE129A /* iPrayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		343863B321EFFD5E00EE129A /* iPrayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 343863CB21EFFD5E00EE129A /* Build configuration list for PBXNativeTarget "iPrayerTests" */;
+			buildPhases = (
+				343863B021EFFD5E00EE129A /* Sources */,
+				343863B121EFFD5E00EE129A /* Frameworks */,
+				343863B221EFFD5E00EE129A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				343863B621EFFD5E00EE129A /* PBXTargetDependency */,
+			);
+			name = iPrayerTests;
+			productName = iPrayerTests;
+			productReference = 343863B421EFFD5E00EE129A /* iPrayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		343863BE21EFFD5E00EE129A /* iPrayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 343863CE21EFFD5E00EE129A /* Build configuration list for PBXNativeTarget "iPrayerUITests" */;
+			buildPhases = (
+				343863BB21EFFD5E00EE129A /* Sources */,
+				343863BC21EFFD5E00EE129A /* Frameworks */,
+				343863BD21EFFD5E00EE129A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				343863C121EFFD5E00EE129A /* PBXTargetDependency */,
+			);
+			name = iPrayerUITests;
+			productName = iPrayerUITests;
+			productReference = 343863BF21EFFD5E00EE129A /* iPrayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3438639521EFFD5A00EE129A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = iPrayer;
+				TargetAttributes = {
+					3438639C21EFFD5A00EE129A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					343863B321EFFD5E00EE129A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3438639C21EFFD5A00EE129A;
+					};
+					343863BE21EFFD5E00EE129A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3438639C21EFFD5A00EE129A;
+					};
+				};
+			};
+			buildConfigurationList = 3438639821EFFD5A00EE129A /* Build configuration list for PBXProject "iPrayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3438639421EFFD5A00EE129A;
+			productRefGroup = 3438639E21EFFD5A00EE129A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3438639C21EFFD5A00EE129A /* iPrayer */,
+				343863B321EFFD5E00EE129A /* iPrayerTests */,
+				343863BE21EFFD5E00EE129A /* iPrayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3438639B21EFFD5A00EE129A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				343863AE21EFFD5E00EE129A /* LaunchScreen.storyboard in Resources */,
+				34C4327D21F05263000883E2 /* GoogleService-Info.plist in Resources */,
+				343863AB21EFFD5E00EE129A /* Assets.xcassets in Resources */,
+				343863A621EFFD5A00EE129A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		343863B221EFFD5E00EE129A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		343863BD21EFFD5E00EE129A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01E8A49B010489D22FA01562 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPrayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FE7FC5409C674CDEE239B67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iPrayer/Pods-iPrayer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPrayer/Pods-iPrayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24A5F543B11F853F95D7A536 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iPrayer/Pods-iPrayer-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPrayer/Pods-iPrayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3438639921EFFD5A00EE129A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3499DD7B22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift in Sources */,
+				341A8401220E8088008BFD45 /* Constants.swift in Sources */,
+				3489E71E21F971D6002FF7A9 /* PeoplePleadViewController.swift in Sources */,
+				3489E71821F8F6B0002FF7A9 /* DataController.swift in Sources */,
+				3421099321FEC20800C6B220 /* TestCell.swift in Sources */,
+				3489E71621F6E0D5002FF7A9 /* PrayRequest+Extra.swift in Sources */,
+				349936342203F0EC00985F75 /* CardDetailViewController.swift in Sources */,
+				3499DD7921FF6B070037A00B /* FirebaseConstants.swift in Sources */,
+				3421099121FEA94300C6B220 /* UserPleadCollectionViewCell.swift in Sources */,
+				3489E71A21F92AA4002FF7A9 /* AddPleadViewController.swift in Sources */,
+				34DF495621F23631000A442A /* TabViewController.swift in Sources */,
+				343863A321EFFD5A00EE129A /* SignInViewController.swift in Sources */,
+				3421098F21FCCB8800C6B220 /* SingletonClass.swift in Sources */,
+				34DF495921F39593000A442A /* UserInfoViewController.swift in Sources */,
+				343863A921EFFD5A00EE129A /* iPrayer.xcdatamodeld in Sources */,
+				343863A121EFFD5A00EE129A /* AppDelegate.swift in Sources */,
+				3409438521FEC54F00720C49 /* UserPleadsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		343863B021EFFD5E00EE129A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				343863B921EFFD5E00EE129A /* iPrayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		343863BB21EFFD5E00EE129A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				343863C421EFFD5E00EE129A /* iPrayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		343863B621EFFD5E00EE129A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3438639C21EFFD5A00EE129A /* iPrayer */;
+			targetProxy = 343863B521EFFD5E00EE129A /* PBXContainerItemProxy */;
+		};
+		343863C121EFFD5E00EE129A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3438639C21EFFD5A00EE129A /* iPrayer */;
+			targetProxy = 343863C021EFFD5E00EE129A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		343863A421EFFD5A00EE129A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				343863A521EFFD5A00EE129A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		343863AC21EFFD5E00EE129A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				343863AD21EFFD5E00EE129A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		343863C621EFFD5E00EE129A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		343863C721EFFD5E00EE129A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		343863C921EFFD5E00EE129A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 786935D4B0F4F6319C0944BE /* Pods-iPrayer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q386VYNM48;
+				INFOPLIST_FILE = iPrayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alireza.com.iPrayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		343863CA21EFFD5E00EE129A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A3C901F0AF56A045942AFE3 /* Pods-iPrayer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q386VYNM48;
+				INFOPLIST_FILE = iPrayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alireza.com.iPrayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		343863CC21EFFD5E00EE129A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iPrayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iprayer.ir.iPrayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPrayer.app/iPrayer";
+			};
+			name = Debug;
+		};
+		343863CD21EFFD5E00EE129A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iPrayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iprayer.ir.iPrayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPrayer.app/iPrayer";
+			};
+			name = Release;
+		};
+		343863CF21EFFD5E00EE129A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iPrayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iprayer.ir.iPrayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iPrayer;
+			};
+			name = Debug;
+		};
+		343863D021EFFD5E00EE129A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iPrayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iprayer.ir.iPrayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iPrayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3438639821EFFD5A00EE129A /* Build configuration list for PBXProject "iPrayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				343863C621EFFD5E00EE129A /* Debug */,
+				343863C721EFFD5E00EE129A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		343863C821EFFD5E00EE129A /* Build configuration list for PBXNativeTarget "iPrayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				343863C921EFFD5E00EE129A /* Debug */,
+				343863CA21EFFD5E00EE129A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		343863CB21EFFD5E00EE129A /* Build configuration list for PBXNativeTarget "iPrayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				343863CC21EFFD5E00EE129A /* Debug */,
+				343863CD21EFFD5E00EE129A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		343863CE21EFFD5E00EE129A /* Build configuration list for PBXNativeTarget "iPrayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				343863CF21EFFD5E00EE129A /* Debug */,
+				343863D021EFFD5E00EE129A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		343863A721EFFD5A00EE129A /* iPrayer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				343863A821EFFD5A00EE129A /* iPrayer.xcdatamodel */,
+			);
+			currentVersion = 343863A821EFFD5A00EE129A /* iPrayer.xcdatamodel */;
+			path = iPrayer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3438639521EFFD5A00EE129A /* Project object */;
+}
