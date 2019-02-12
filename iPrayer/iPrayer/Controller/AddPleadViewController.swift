@@ -140,7 +140,7 @@ class AddPleadViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         userPlead.feelingBefore = Int16(Int(sBar_beforeFeel.value))
         userPlead.commendBefore = txtF_commentBefore.text
         userPlead.feelingAfter = 4
-        userPlead.commendAfter = "good*"
+        userPlead.commendAfter = "good"
         
         
         try? dataController.viewContext.save()
