@@ -32,5 +32,25 @@ struct Constants {
         static let desc = "this medition help you to better health condition."
         static let isPublic = true
     }
+    
+    func halgheType(_ type: Int) -> String {
+        let halgheType = [10: "Ertebat Vije",11: "Faradarmani", 41: "+1", 42: "+2",
+                          44: "-1", 44: "-2",91: "defaei 1",92: "defaei 2",93: "defaei 3",94: "defaei 4",95: "defaei 5"]
+        return halgheType[type]!
+    }
+    
+    
+    
+//    var halgheType = [Int:String]()
+    //: Dictionary literal
+//    var halgheType = [11: faraDarmani.name, 12: "flock", 13: "pride"]
+//
+//    var volumeMilliliters: Double
+//
+//    // These are US ounces
+//    var volumeOunces: Double {
+//        return 0.033814
+//    }
+
 
 }

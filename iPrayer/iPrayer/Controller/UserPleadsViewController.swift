@@ -42,7 +42,7 @@ class UserPleadsViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TestCell", for: indexPath) as! TestCell
         
         let userPlead = self.prayRequests[(indexPath as NSIndexPath).row]
-        cell.lbl_test.text = String(userPlead.prayType)
+        cell.lbl_test.text = userPlead.prayType
     
                  cell.lbl_numUserInteraction.text = "2"
         cell.lbl_feelBefore.text = feelingEmojiFunc(Int(userPlead.feelingBefore))
@@ -67,11 +67,14 @@ class UserPleadsViewController: UICollectionViewController {
     
         
     }
-    
+    func halgheType(_ type: Int) -> String {
+        let halgheType = [11: "fara darmani", 12: "flock", 13: "pride"]
+        return halgheType[type]!
+    }
     func feelingEmojiFunc(_ feel: Int) -> String {
         switch feel {
         case -5:
-            return 😡
+            return String(UnicodeScalar(128545)!)
         case -4:
             return String(UnicodeScalar(128567)!)
         case -3:

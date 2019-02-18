@@ -73,14 +73,14 @@ class PeoplePleadViewController: UICollectionViewController {
         
         let pleads = pleadsSnapshot.value as! [String:Any]
         let name = pleads["userName"] as! String
-        let ringType = pleads[FirebaseConstants.PleadFields.pleadType] as! Int
+        let ringType = pleads[FirebaseConstants.PleadFields.pleadType] as! String
         let commentAfter = pleads[FirebaseConstants.PleadFields.userCommentAfter] as! String
         let commentBefore = pleads[FirebaseConstants.PleadFields.userCommentBefore] as! String
         let feelAfter = pleads[FirebaseConstants.PleadFields.userFeelAfter] as! Int
         let feelBefore = pleads[FirebaseConstants.PleadFields.userFeelBefore] as! Int
         
         cell.lbl_PeopleName.text = name
-        cell.lbl_PeoplePleadType.text = String(ringType) 
+        cell.lbl_PeoplePleadType.text = ringType
         cell.lbl_PeopleFeelBefore.text = feelingEmojiFunc(feelBefore)
         cell.lbl_PeopleFeelAfter.text = feelingEmojiFunc(feelAfter)
         
@@ -113,6 +113,12 @@ class PeoplePleadViewController: UICollectionViewController {
         // Present the view controller using navigation
         navigationController!.pushViewController(vc, animated: true)
      }
+    
+    func halgheType(_ type: Int) -> String {
+        let halgheType = [10: "Ertebat Vije",11: "Faradarmani", 41: "+1", 42: "+2",
+                          44: "-1", 44: "-2",91: "defaei 1",92: "defaei 2",93: "defaei 3",94: "defaei 4",95: "defaei 5",]
+        return halgheType[type]!
+    }
     
     func feelingEmojiFunc(_ feel: Int) -> String {
         switch feel {

@@ -134,12 +134,12 @@ class AddPleadViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func addUserPlead(){
         let userPlead = PrayRequest(context: dataController.viewContext)
-        userPlead.prayType = 12
+        userPlead.prayType = "faradarmani"
         userPlead.creationDate = Date()
         userPlead.publicPlead = switch_public.isOn
         userPlead.feelingBefore = Int16(Int(sBar_beforeFeel.value))
         userPlead.commendBefore = txtF_commentBefore.text
-        userPlead.feelingAfter = 4
+        userPlead.feelingAfter = 10
         userPlead.commendAfter = "good"
         
         
@@ -149,9 +149,9 @@ class AddPleadViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let myDate = formatter.string(from: Date())
         // convert your string to date
-        let yourDate = formatter.date(from: myDate)
+        _ = formatter.date(from: myDate)
         
-        let data = [FirebaseConstants.PleadFields.pleadType: 11 as Int,FirebaseConstants.PleadFields.pleadCreationDate: myDate as String,  FirebaseConstants.PleadFields.isPleadPublic: switch_public.isOn as Bool, FirebaseConstants.PleadFields.userCommentBefore: "bad" as String, FirebaseConstants.PleadFields.userFeelBefore: Int(sBar_beforeFeel.value) as Int, FirebaseConstants.PleadFields.userCommentAfter: "ggod" as String, FirebaseConstants.PleadFields.userFeelAfter: 5 as Int] as [String : Any]
+        let data = [FirebaseConstants.PleadFields.pleadType: selectedPleadType as! String,FirebaseConstants.PleadFields.pleadCreationDate: myDate as String,  FirebaseConstants.PleadFields.isPleadPublic: switch_public.isOn as Bool, FirebaseConstants.PleadFields.userCommentBefore: "bad" as String, FirebaseConstants.PleadFields.userFeelBefore: Int(sBar_beforeFeel.value) as Int, FirebaseConstants.PleadFields.userCommentAfter: "ggod" as String, FirebaseConstants.PleadFields.userFeelAfter: 10 as Int] as [String : Any]
         if (userPlead.publicPlead){
             sendPleadToDatabase(data: data)
             
@@ -181,6 +181,13 @@ class AddPleadViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         present(alert, animated: true, completion: nil)
         
     }
+    
+    func halgheType(_ type: Int) -> String {
+        let halgheType = [10: "Ertebat Vije",11: "Faradarmani", 41: "+1", 42: "+2",
+                          44: "-1", 44: "-2",91: "defaei 1",92: "defaei 2",93: "defaei 3",94: "defaei 4",95: "defaei 5",]
+        return halgheType[type]!
+    }
+    
     
     func feelingEmojiFunc(_ feel: Int) -> String {
         switch feel {
