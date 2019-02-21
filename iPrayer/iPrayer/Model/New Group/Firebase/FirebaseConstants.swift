@@ -19,4 +19,10 @@ struct FirebaseConstants {
         static let isPleadPublic = "isPleadPublic"
         static let pleadCreationDate = "pleadCreationDate"
     }
+    
+    struct MessageFields {
+        static let name = "name"
+        static let text = "text"
+        static let imageUrl = "photoUrl"
+    }
 }

@@ -240,17 +240,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kR8-2q-YfY">
-                            <size key="itemSize" width="351" height="194"/>
+                            <size key="itemSize" width="351" height="99"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TestCell" id="Isc-uJ-Di0" customClass="TestCell" customModule="iPrayer" customModuleProvider="target">
-                                <rect key="frame" x="12" y="0.0" width="351" height="194"/>
+                                <rect key="frame" x="12" y="0.0" width="351" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="351" height="194"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="351" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Typre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwr-NL-nxo" userLabel="Lbl user Type">
@@ -259,21 +259,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1B-GK-uDf" userLabel="Lbl feel after">
-                                            <rect key="frame" x="283" y="150" width="48" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lg9-KO-Fqb" userLabel="Lbl user interaction">
-                                            <rect key="frame" x="289" y="12" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k2-LM-T3y" userLabel="Lbl feel before">
-                                            <rect key="frame" x="20" y="150" width="48" height="24"/>
+                                            <rect key="frame" x="283" y="20" width="48" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -282,17 +269,13 @@
                                 </view>
                                 <color key="backgroundColor" red="0.69451511832807378" green="0.82321019185093258" blue="0.96109612944162437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="G1B-GK-uDf" secondAttribute="trailing" constant="20" id="CLk-i8-5aK"/>
-                                    <constraint firstAttribute="bottom" secondItem="7k2-LM-T3y" secondAttribute="bottom" constant="20" id="LDH-OM-g6D"/>
-                                    <constraint firstItem="7k2-LM-T3y" firstAttribute="leading" secondItem="Isc-uJ-Di0" secondAttribute="leading" constant="20" id="PDw-fK-tUc"/>
                                     <constraint firstItem="kwr-NL-nxo" firstAttribute="leading" secondItem="Isc-uJ-Di0" secondAttribute="leading" constant="51" id="eSJ-oo-Pr6"/>
-                                    <constraint firstAttribute="bottom" secondItem="G1B-GK-uDf" secondAttribute="bottom" constant="20" id="sDP-iV-z3K"/>
-                                    <constraint firstItem="kwr-NL-nxo" firstAttribute="top" secondItem="Isc-uJ-Di0" secondAttribute="top" id="zZI-R6-OA2"/>
+                                    <constraint firstAttribute="trailing" secondItem="7k2-LM-T3y" secondAttribute="trailing" constant="20" id="knA-9i-uem"/>
+                                    <constraint firstItem="7k2-LM-T3y" firstAttribute="top" secondItem="Isc-uJ-Di0" secondAttribute="top" constant="20" id="qyv-LX-GNf"/>
+                                    <constraint firstItem="kwr-NL-nxo" firstAttribute="top" secondItem="Isc-uJ-Di0" secondAttribute="top" constant="24" id="zZI-R6-OA2"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="lbl_feelAfter" destination="G1B-GK-uDf" id="xQ4-1x-LNq"/>
                                     <outlet property="lbl_feelBefore" destination="7k2-LM-T3y" id="Go3-if-oT7"/>
-                                    <outlet property="lbl_numUserInteraction" destination="lg9-KO-Fqb" id="uVM-cD-vuk"/>
                                     <outlet property="lbl_test" destination="kwr-NL-nxo" id="DnW-di-309"/>
                                 </connections>
                             </collectionViewCell>
@@ -316,7 +299,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F0S-g3-3iy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750" y="840"/>
+            <point key="canvasLocation" x="2749.5999999999999" y="839.73013493253382"/>
         </scene>
         <!--Together-->
         <scene sceneID="6h2-6C-dEh">
@@ -365,12 +348,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="num" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEE-ne-ORj">
-                                            <rect key="frame" x="272" y="20" width="34" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="feel before" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojt-27-w6R">
                                             <rect key="frame" x="12" y="148" width="136" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -379,7 +356,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ring type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mma-QY-cIk">
                                             <rect key="frame" x="158" y="94" width="68" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -393,7 +370,6 @@
                                 </view>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="LEE-ne-ORj" secondAttribute="trailing" constant="28" id="0sm-Nd-Skp"/>
                                     <constraint firstItem="mma-QY-cIk" firstAttribute="centerY" secondItem="B6t-C8-oam" secondAttribute="centerY" id="5jP-Mc-B3J"/>
                                     <constraint firstItem="hkN-W6-G0Z" firstAttribute="top" secondItem="B6t-C8-oam" secondAttribute="top" constant="20" id="7LL-g2-XF5"/>
                                     <constraint firstAttribute="bottom" secondItem="lNK-g5-Old" secondAttribute="bottom" constant="8" id="NFD-NH-SaK"/>
@@ -402,12 +378,10 @@
                                     <constraint firstItem="hkN-W6-G0Z" firstAttribute="leading" secondItem="B6t-C8-oam" secondAttribute="leading" constant="20" id="eeY-CL-Wyp"/>
                                     <constraint firstItem="mma-QY-cIk" firstAttribute="centerX" secondItem="B6t-C8-oam" secondAttribute="centerX" id="ieu-wj-Ssf"/>
                                     <constraint firstAttribute="bottom" secondItem="ojt-27-w6R" secondAttribute="bottom" constant="8" id="lP4-og-Qrn"/>
-                                    <constraint firstItem="LEE-ne-ORj" firstAttribute="top" secondItem="B6t-C8-oam" secondAttribute="top" constant="20" id="tqx-fi-CEv"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="lbl_PeopleFeelAfter" destination="lNK-g5-Old" id="pHU-Mr-Kja"/>
                                     <outlet property="lbl_PeopleFeelBefore" destination="ojt-27-w6R" id="8d9-YH-WJD"/>
-                                    <outlet property="lbl_PeopleInteractionnum" destination="LEE-ne-ORj" id="eN8-x1-M77"/>
                                     <outlet property="lbl_PeopleName" destination="hkN-W6-G0Z" id="cn4-rk-cPo"/>
                                     <outlet property="lbl_PeoplePleadType" destination="mma-QY-cIk" id="qh5-Df-Zah"/>
                                 </connections>
@@ -469,7 +443,7 @@
                                 <rect key="frame" x="20" y="183" width="335" height="385"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationLevel="1" indentationWidth="-2" reuseIdentifier="messageCell" textLabel="Vb3-mP-k0v" imageView="0Kn-zu-jKi" style="IBUITableViewCellStyleDefault" id="pIr-Hk-qiO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationLevel="1" indentationWidth="-2" reuseIdentifier="MessageCell" textLabel="Vb3-mP-k0v" imageView="0Kn-zu-jKi" style="IBUITableViewCellStyleDefault" id="pIr-Hk-qiO">
                                         <rect key="frame" x="0.0" y="28" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pIr-Hk-qiO" id="a4S-RU-yJ2">
@@ -477,13 +451,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="comment" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vb3-mP-k0v">
-                                                    <rect key="frame" x="74" y="0.0" width="246" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="305" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="ic_account_circle.png" id="0Kn-zu-jKi">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Kn-zu-jKi">
                                                     <rect key="frame" x="15" y="0.0" width="44" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -491,6 +465,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="idK-8f-Yt7" id="uTG-oB-Ydx"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xeA-ob-Qe1">
                                 <rect key="frame" x="20" y="581" width="97" height="30"/>
@@ -507,6 +484,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="38q-is-xvk" firstAttribute="leading" secondItem="AT4-E2-zgm" secondAttribute="leading" constant="20" id="0dS-b8-Sxr"/>
                             <constraint firstItem="ttN-CM-RjX" firstAttribute="top" secondItem="AT4-E2-zgm" secondAttribute="top" constant="24" id="30c-3p-Tfc"/>
@@ -531,17 +509,23 @@
                             <constraint firstItem="RLd-bD-w1T" firstAttribute="top" secondItem="38q-is-xvk" secondAttribute="bottom" constant="8" id="uqE-g7-iBv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AT4-E2-zgm"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nt6-Zs-TbX" appends="YES" id="sMn-6f-7Co"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="btn_send" destination="xDB-91-KXq" id="wnp-5R-qoh"/>
+                        <outlet property="dismissKeyboardRecognizer" destination="nt6-Zs-TbX" id="9dj-di-aSc"/>
                         <outlet property="lbl_comment" destination="RLd-bD-w1T" id="lix-Ku-dVw"/>
                         <outlet property="lbl_feeling" destination="ga4-C0-9aZ" id="ayD-ux-oHx"/>
                         <outlet property="lbl_prayType" destination="ttN-CM-RjX" id="9Up-YK-pq0"/>
                         <outlet property="lbl_userName" destination="38q-is-xvk" id="aCn-OC-iuP"/>
+                        <outlet property="table_comments" destination="t2M-Z8-uHA" id="wji-sW-VoE"/>
                         <outlet property="txf_message" destination="xeA-ob-Qe1" id="w6G-wJ-0on"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbQ-uu-dH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nt6-Zs-TbX" userLabel="Dismiss Keyboard Recognizer"/>
             </objects>
             <point key="canvasLocation" x="3692" y="452.92353823088462"/>
         </scene>
@@ -681,7 +665,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_account_circle.png" width="60" height="60"/>
         <image name="together" width="30" height="30"/>
         <image name="user" width="30" height="30"/>
     </resources>

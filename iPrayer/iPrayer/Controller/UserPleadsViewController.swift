@@ -44,9 +44,9 @@ class UserPleadsViewController: UICollectionViewController {
         let userPlead = self.prayRequests[(indexPath as NSIndexPath).row]
         cell.lbl_test.text = userPlead.prayType
     
-                 cell.lbl_numUserInteraction.text = "2"
+               //  cell.lbl_numUserInteraction.text = "2"
         cell.lbl_feelBefore.text = feelingEmojiFunc(Int(userPlead.feelingBefore))
-                 cell.lbl_feelAfter.text = feelingEmojiFunc(Int(userPlead.feelingAfter))
+                 //cell.lbl_feelAfter.text = feelingEmojiFunc(Int(userPlead.feelingAfter))
 
         return cell
     }

@@ -20,6 +20,7 @@
 		343863AE21EFFD5E00EE129A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343863AC21EFFD5E00EE129A /* LaunchScreen.storyboard */; };
 		343863B921EFFD5E00EE129A /* iPrayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343863B821EFFD5E00EE129A /* iPrayerTests.swift */; };
 		343863C421EFFD5E00EE129A /* iPrayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343863C321EFFD5E00EE129A /* iPrayerUITests.swift */; };
+		3441FBDB221BBFE700545B17 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3441FBDA221BBFE700545B17 /* GCDBlackBox.swift */; };
 		3489E71621F6E0D5002FF7A9 /* PrayRequest+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */; };
 		3489E71821F8F6B0002FF7A9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71721F8F6B0002FF7A9 /* DataController.swift */; };
 		3489E71A21F92AA4002FF7A9 /* AddPleadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71921F92AA4002FF7A9 /* AddPleadViewController.swift */; };
@@ -70,6 +71,7 @@
 		343863BF21EFFD5E00EE129A /* iPrayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPrayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		343863C321EFFD5E00EE129A /* iPrayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPrayerUITests.swift; sourceTree = "<group>"; };
 		343863C521EFFD5E00EE129A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3441FBDA221BBFE700545B17 /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 		3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrayRequest+Extra.swift"; sourceTree = "<group>"; };
 		3489E71721F8F6B0002FF7A9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		3489E71921F92AA4002FF7A9 /* AddPleadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPleadViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				3489E71321F6D823002FF7A9 /* Assets */,
 				34C4327C21F05262000883E2 /* GoogleService-Info.plist */,
 				343863AF21EFFD5E00EE129A /* Info.plist */,
+				3441FBDA221BBFE700545B17 /* GCDBlackBox.swift */,
 			);
 			path = iPrayer;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				34DF495921F39593000A442A /* UserInfoViewController.swift in Sources */,
 				343863A921EFFD5A00EE129A /* iPrayer.xcdatamodeld in Sources */,
 				343863A121EFFD5A00EE129A /* AppDelegate.swift in Sources */,
+				3441FBDB221BBFE700545B17 /* GCDBlackBox.swift in Sources */,
 				3409438521FEC54F00720C49 /* UserPleadsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

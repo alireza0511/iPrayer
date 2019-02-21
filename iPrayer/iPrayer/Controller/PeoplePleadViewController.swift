@@ -53,6 +53,7 @@ class PeoplePleadViewController: UICollectionViewController {
             print("pppppppp" )
             print(self.peoplePleads.count)
         }
+        
     }
     
     deinit {
@@ -104,8 +105,6 @@ class PeoplePleadViewController: UICollectionViewController {
      print("selected item")
         // Grab the DetailVC from Storyboard
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "CardDetailView") as! CardDetailViewController
-        
-        
         //Populate view controller with data from the selected item
         vc.peoplePleads = peoplePleads[(indexPath as NSIndexPath).row]
         vc.isUserCard = false
