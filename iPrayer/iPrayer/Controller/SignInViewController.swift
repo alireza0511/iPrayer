@@ -28,9 +28,7 @@ class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
             configureAuth()
-
     }
 
     func configureAuth() {
@@ -41,7 +39,6 @@ class SignInViewController: UIViewController {
                 if self.user != activeUser {
                     self.user = activeUser
                   
-                        //let name1 = user!.email!.components(separatedBy: "@")[0]
                     if let name = UserDefaults.standard.value(forKey: "userName") {
                             print(name)
                     } else {
@@ -82,8 +79,6 @@ class SignInViewController: UIViewController {
                         }
                     }
                     
-//                        let r = user!.providerData
-              
                     self.signedInStatus(isSignedIn: true)
                     self.singInBtn.setTitle(" start ", for: UIControl.State.normal)
                 }
@@ -97,62 +92,39 @@ class SignInViewController: UIViewController {
     func configureDatabase(){
         //1.3
         ref = Database.database().reference()
-        /*
-         // 1.21-1 for appear messeges that store in database in table view. put listener to trigger an action any time there's a change to the database
-         _refHandle = ref.child("messages").observe(.childAdded){ (snapshot: DataSnapshot) in
-         self.messages.append(snapshot)
-         self.messagesTable.insertRows(at: [IndexPath(row: self.messages.count - 1, section:  0)], with: .automatic)
-         self.scrollToBottomMessage()
-         
-         }
-         */
+        
     }
     func signedInStatus(isSignedIn: Bool){
         /*
          signInButton.isHidden = isSignedIn
          signOutButton.isHidden = !isSignedIn
-         messagesTable.isHidden = !isSignedIn
-         messageTextField.isHidden = !isSignedIn
          sendButton.isHidden = !isSignedIn
          imageMessage.isHidden = !isSignedIn
          */
         
-        
         if (isSignedIn){
-           
-            // 1.2
-            //configureDatabase()
-            print("go to next page")
-//            let controller: TabViewController
-//            controller = storyboard?.instantiateViewController(withIdentifier: "TabBarView") as! TabViewController
-//
-//            present(controller, animated: true, completion: nil)
                 performSegue(withIdentifier: "segue_signInToTab", sender: self)
-         
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "segue_signInToTab" {
 //        let controller = segue.destination as! TabViewController
-//        //controller.dataController = dataController
 //        }
-//        if segue.identifier == "segue_signInToUser" {
-//            let controller = segue.destination as! UserInfoViewController
-//            //        controller.user = user
-//        }
+        if segue.identifier == "segue_signInToUser" {
+            let controller = segue.destination as! UserInfoViewController
+                    controller.isFirstLunch = true
+        }
         
 
         
     }
 
     @IBAction func showLoginPage(_ sender: Any) {
-//        loginSession()
-//        performSegue(withIdentifier: "segue_signInToTab", sender: self)
+
         
                   if (UserDefaults.standard.bool(forKey:  "hasLaunchedBefore")){
                       performSegue(withIdentifier: "segue_signInToTab", sender: self)
-                                  //self.signedInStatus(isSignedIn: true)
                       print("has lunch before")
                   } else {
                     UserDefaults.standard.setValue(true, forKey: "hasLaunchedBefore")
@@ -171,13 +143,4 @@ class SignInViewController: UIViewController {
     }
 
 }
-//        let emojiRanges = [
-//            0x1F601...0x1F64F
-//        ]
-//
-//        for range in emojiRanges {
-//            for i in range {
-//                let c = String(UnicodeScalar(i)!)
-//                print(c)
-//            }
-//        }
+

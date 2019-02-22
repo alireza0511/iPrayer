@@ -57,7 +57,10 @@ class PeoplePleadViewController: UICollectionViewController {
     }
     
     deinit {
-        ref.child("UserPleads").removeObserver(withHandle: _refHandle)
+//        if let refferance = ref.child("UserPleads") as! Database {
+//            refferance.removeObserver(withHandle: _refHandle)
+//        }
+        //ref.child("UserPleads").removeObserver(withHandle: _refHandle)
         
     }
     
