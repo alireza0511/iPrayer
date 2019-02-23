@@ -82,11 +82,13 @@ class PeoplePleadViewController: UICollectionViewController {
         let commentBefore = pleads[FirebaseConstants.PleadFields.userCommentBefore] as! String
         let feelAfter = pleads[FirebaseConstants.PleadFields.userFeelAfter] as! Int
         let feelBefore = pleads[FirebaseConstants.PleadFields.userFeelBefore] as! Int
-        
+        let userType = pleads[FirebaseConstants.PleadFields.userType] as! String
+
         cell.lbl_PeopleName.text = name
         cell.lbl_PeoplePleadType.text = ringType
         cell.lbl_PeopleFeelBefore.text = feelingEmojiFunc(feelBefore)
         cell.lbl_PeopleFeelAfter.text = feelingEmojiFunc(feelAfter)
+        cell.lbl_userType.text = userType
         
      
 //     let userPlead = self.prayRequests[(indexPath as NSIndexPath).row]

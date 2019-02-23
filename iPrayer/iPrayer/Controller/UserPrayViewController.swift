@@ -10,16 +10,14 @@ import Foundation
 import UIKit
 import CoreData
 
-class UserPleadsViewController: UICollectionViewController {
+class UserPrayViewController: UICollectionViewController {
     
     var prayRequests: [PrayRequest] = []
     
-    //var dataController: DataController!
     var dataController = SingletonClass.shared.state
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let fetchReguest: NSFetchRequest<PrayRequest> = PrayRequest.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
@@ -45,7 +43,7 @@ class UserPleadsViewController: UICollectionViewController {
         cell.lbl_test.text = userPlead.prayType
     
                //  cell.lbl_numUserInteraction.text = "2"
-        cell.lbl_feelBefore.text = feelingEmojiFunc(Int(userPlead.feelingBefore))
+        cell.lbl_feelBefore.text = SingletonClass.shared.feelingEmojiFunc(Int(userPlead.feelingBefore))//
                  //cell.lbl_feelAfter.text = feelingEmojiFunc(Int(userPlead.feelingAfter))
 
         return cell
@@ -63,40 +61,8 @@ class UserPleadsViewController: UICollectionViewController {
         
         // Present the view controller using navigation
         navigationController!.pushViewController(vc, animated: true)
-        
     
-        
-    }
-    func halgheType(_ type: Int) -> String {
-        let halgheType = [11: "fara darmani", 12: "flock", 13: "pride"]
-        return halgheType[type]!
-    }
-    func feelingEmojiFunc(_ feel: Int) -> String {
-        switch feel {
-        case -5:
-            return String(UnicodeScalar(128545)!)
-        case -4:
-            return String(UnicodeScalar(128567)!)
-        case -3:
-            return String(UnicodeScalar(128557)!)
-        case -2:
-            return String(UnicodeScalar(128560)!)
-        case -1:
-            return String(UnicodeScalar(128542)!)
-        case 0:
-            return String(UnicodeScalar(128530)!)
-        case 1:
-            return String(UnicodeScalar(128528)!)
-        case 2:
-            return String(UnicodeScalar(128522)!)
-        case 3:
-            return String(UnicodeScalar(128513)!)
-        case 4:
-            return String(UnicodeScalar(128514)!)
-        case 5:
-            return String(UnicodeScalar(128519)!)
-        default:
-            return String(UnicodeScalar(128591)!)
-        }
     }
 }
+
+

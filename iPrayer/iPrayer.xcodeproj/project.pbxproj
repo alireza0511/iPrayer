@@ -13,6 +13,11 @@
 		3421099121FEA94300C6B220 /* UserPleadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421099021FEA94300C6B220 /* UserPleadCollectionViewCell.swift */; };
 		3421099321FEC20800C6B220 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421099221FEC20800C6B220 /* TestCell.swift */; };
 		342ADCDA2221BED2007E8A49 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342ADCD92221BED2007E8A49 /* DetailNewsViewController.swift */; };
+		342ADCDC2221D79A007E8A49 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342ADCDB2221D79A007E8A49 /* Reachability.swift */; };
+		342ADCDE2221D8C3007E8A49 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342ADCDD2221D8C3007E8A49 /* ConnectionManager.swift */; };
+		342ADCE02221D91A007E8A49 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342ADCDF2221D91A007E8A49 /* BaseViewController.swift */; };
+		342ADCE22221D9C9007E8A49 /* ActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342ADCE12221D9C9007E8A49 /* ActivitySpinner.swift */; };
+		342ADCE42221DEA9007E8A49 /* ActivitySpinnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342ADCE32221DEA9007E8A49 /* ActivitySpinnerView.xib */; };
 		343863A121EFFD5A00EE129A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343863A021EFFD5A00EE129A /* AppDelegate.swift */; };
 		343863A321EFFD5A00EE129A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343863A221EFFD5A00EE129A /* SignInViewController.swift */; };
 		343863A621EFFD5A00EE129A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343863A421EFFD5A00EE129A /* Main.storyboard */; };
@@ -65,6 +70,11 @@
 		3421099021FEA94300C6B220 /* UserPleadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPleadCollectionViewCell.swift; sourceTree = "<group>"; };
 		3421099221FEC20800C6B220 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
 		342ADCD92221BED2007E8A49 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
+		342ADCDB2221D79A007E8A49 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = ../../../../../../Desktop/Reachability.swift; sourceTree = "<group>"; };
+		342ADCDD2221D8C3007E8A49 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		342ADCDF2221D91A007E8A49 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		342ADCE12221D9C9007E8A49 /* ActivitySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySpinner.swift; sourceTree = "<group>"; };
+		342ADCE32221DEA9007E8A49 /* ActivitySpinnerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivitySpinnerView.xib; path = ../../../../../../../Desktop/ActivitySpinnerView.xib; sourceTree = "<group>"; };
 		3438639D21EFFD5A00EE129A /* iPrayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPrayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343863A021EFFD5A00EE129A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		343863A221EFFD5A00EE129A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +170,7 @@
 		3438639F21EFFD5A00EE129A /* iPrayer */ = {
 			isa = PBXGroup;
 			children = (
+				342ADCDB2221D79A007E8A49 /* Reachability.swift */,
 				343863A021EFFD5A00EE129A /* AppDelegate.swift */,
 				34DF495321F235C8000A442A /* Model */,
 				34DF495721F23DB5000A442A /* View */,
@@ -169,6 +180,7 @@
 				34C4327C21F05262000883E2 /* GoogleService-Info.plist */,
 				343863AF21EFFD5E00EE129A /* Info.plist */,
 				3441FBDA221BBFE700545B17 /* GCDBlackBox.swift */,
+				342ADCDD2221D8C3007E8A49 /* ConnectionManager.swift */,
 			);
 			path = iPrayer;
 			sourceTree = "<group>";
@@ -262,6 +274,7 @@
 				349936332203F0EC00985F75 /* CardDetailViewController.swift */,
 				348D62702221946F00D78E92 /* NEWSViewController.swift */,
 				342ADCD92221BED2007E8A49 /* DetailNewsViewController.swift */,
+				342ADCDF2221D91A007E8A49 /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,10 +282,12 @@
 		34DF495721F23DB5000A442A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				342ADCE32221DEA9007E8A49 /* ActivitySpinnerView.xib */,
 				3421099021FEA94300C6B220 /* UserPleadCollectionViewCell.swift */,
 				3421099221FEC20800C6B220 /* TestCell.swift */,
 				3499DD7A22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift */,
 				348D62722221984800D78E92 /* NEWSTableViewCell.swift */,
+				342ADCE12221D9C9007E8A49 /* ActivitySpinner.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -404,6 +419,7 @@
 				343863AE21EFFD5E00EE129A /* LaunchScreen.storyboard in Resources */,
 				34C4327D21F05263000883E2 /* GoogleService-Info.plist in Resources */,
 				343863AB21EFFD5E00EE129A /* Assets.xcassets in Resources */,
+				342ADCE42221DEA9007E8A49 /* ActivitySpinnerView.xib in Resources */,
 				343863A621EFFD5A00EE129A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,14 +562,18 @@
 				3499DD7B22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift in Sources */,
 				341A8401220E8088008BFD45 /* Constants.swift in Sources */,
 				3489E71E21F971D6002FF7A9 /* PeoplePleadViewController.swift in Sources */,
+				342ADCDE2221D8C3007E8A49 /* ConnectionManager.swift in Sources */,
+				342ADCE02221D91A007E8A49 /* BaseViewController.swift in Sources */,
 				3489E71821F8F6B0002FF7A9 /* DataController.swift in Sources */,
 				3421099321FEC20800C6B220 /* TestCell.swift in Sources */,
 				3489E71621F6E0D5002FF7A9 /* PrayRequest+Extra.swift in Sources */,
 				349936342203F0EC00985F75 /* CardDetailViewController.swift in Sources */,
 				348D62712221946F00D78E92 /* NEWSViewController.swift in Sources */,
+				342ADCE22221D9C9007E8A49 /* ActivitySpinner.swift in Sources */,
 				3499DD7921FF6B070037A00B /* FirebaseConstants.swift in Sources */,
 				3421099121FEA94300C6B220 /* UserPleadCollectionViewCell.swift in Sources */,
 				348D626D2220F7EF00D78E92 /* HalgheNewsConvenience.swift in Sources */,
+				342ADCDC2221D79A007E8A49 /* Reachability.swift in Sources */,
 				3489E71A21F92AA4002FF7A9 /* AddPrayViewController.swift in Sources */,
 				34DF495621F23631000A442A /* TabViewController.swift in Sources */,
 				343863A321EFFD5A00EE129A /* SignInViewController.swift in Sources */,

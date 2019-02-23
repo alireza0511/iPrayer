@@ -11,7 +11,7 @@ import Foundation
 extension HalgheNewsClient {
     // MARK: GET Convenience Methods
     
-    func getNewsInfo(_ completionHandlerForNewsInfo: @escaping (_ result: [NewsStruct]?, _ error: NSError?, _ success: Bool ) -> Void) {
+    func getNewsInfo(_ completionHandlerForNewsInfo: @escaping (_ result: [NewsStruct]?, _ error: String?, _ success: Bool ) -> Void) {
         
         /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
         var mutableMethod: String
@@ -31,7 +31,7 @@ extension HalgheNewsClient {
                             print(dbResults)
                             completionHandlerForNewsInfo(result,nil,true)
                         }else {
-                            completionHandlerForNewsInfo(nil, NSError(domain: "getFavoriteMovies parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse getFavoriteMovies"]),false)
+                            completionHandlerForNewsInfo(nil, "Could not parse news json",false)
                         }
             }
         }

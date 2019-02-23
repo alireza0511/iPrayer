@@ -19,8 +19,12 @@ class HalgheNewsClient: NSObject {
     }
     
     // MARK: GET with
-    func taskForGETMethod(_ method: String, parameters: [String:AnyObject]?, completionHandlerForGET: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask {
+    func taskForGETMethod(_ method: String, parameters: [String:AnyObject]?, completionHandlerForGET: @escaping (_ result: AnyObject?, _ error: String?) -> Void) -> URLSessionDataTask {
         
+        if ConnectionManager.shared.isNetworkAvailable == false {
+            completionHandlerForGET(nil, "No connection available")
+           
+        }
         /* 1. Set the parameters */
         let urlString = "http://node.jazzb.com:8000/api/ring_news"
         let url = URL(string: urlString)
@@ -34,9 +38,8 @@ class HalgheNewsClient: NSObject {
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
             
             func sendError(_ error: String) {
-                print(error)
-                let userInfo = [NSLocalizedDescriptionKey : error]
-                completionHandlerForGET(nil, NSError(domain: "taskForGETMethod", code: 1, userInfo: userInfo))
+                
+                completionHandlerForGET(nil, error)
             }
             
             /* GUARD: Was there an error? */
@@ -67,8 +70,12 @@ class HalgheNewsClient: NSObject {
         return task
     }
     
-    func taskForGETImage(_ filePath: String, completionHandlerForImage: @escaping (_ imageData: Data?, _ error: NSError?) -> Void) -> URLSessionTask {
+    func taskForGETImage(_ filePath: String, completionHandlerForImage: @escaping (_ imageData: Data?, _ error: String?) -> Void) -> URLSessionTask {
         
+        if ConnectionManager.shared.isNetworkAvailable == false {
+            completionHandlerForImage(nil, "No connection available")
+            
+        }
         /* 1. Set the parameters */
         // There are none...
         
@@ -82,9 +89,8 @@ class HalgheNewsClient: NSObject {
         let task = session.dataTask(with: request) { (data, response, error) in
             
             func sendError(_ error: String) {
-                print(error)
-                let userInfo = [NSLocalizedDescriptionKey : error]
-                completionHandlerForImage(nil, NSError(domain: "taskForGETMethod", code: 1, userInfo: userInfo))
+                
+                completionHandlerForImage(nil, error)
             }
             
             /* GUARD: Was there an error? */
@@ -116,14 +122,13 @@ class HalgheNewsClient: NSObject {
     }
     
     // given raw JSON, return a usable Foundation object
-    private func convertDataWithCompletionHandler(_ data: Data, completionHandlerForConvertData: (_ result: AnyObject?, _ error: NSError?) -> Void) {
+    private func convertDataWithCompletionHandler(_ data: Data, completionHandlerForConvertData: (_ result: AnyObject?, _ error: String?) -> Void) {
         
         var parsedResult: AnyObject! = nil
         do {
             parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as AnyObject
         } catch {
-            let userInfo = [NSLocalizedDescriptionKey : "Could not parse the data as JSON: '\(data)'"]
-            completionHandlerForConvertData(nil, NSError(domain: "convertDataWithCompletionHandler", code: 1, userInfo: userInfo))
+            completionHandlerForConvertData(nil, "Could not parse the data as JSON: '\(data)'")
         }
         
         completionHandlerForConvertData(parsedResult, nil)
