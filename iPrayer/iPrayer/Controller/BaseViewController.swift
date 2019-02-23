@@ -27,6 +27,7 @@ class BaseViewController : UIViewController {
     
     func removeSpinner() {
         self.activitySpinner?.removeFromSuperview()
+
     }
     
     func showNoConnectionAlert() {

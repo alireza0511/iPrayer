@@ -273,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="1878" y="134"/>
         </scene>
-        <!--People Plead View Controller-->
+        <!--People Pray View Controller-->
         <scene sceneID="mMI-sH-Ffk">
             <objects>
-                <collectionViewController id="eIR-9D-eeu" customClass="PeoplePleadViewController" customModule="iPrayer" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="eIR-9D-eeu" customClass="PeoplePrayViewController" customModule="iPrayer" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="YOL-dQ-fl2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

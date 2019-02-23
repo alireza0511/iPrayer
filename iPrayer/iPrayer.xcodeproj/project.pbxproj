@@ -30,7 +30,7 @@
 		3489E71621F6E0D5002FF7A9 /* PrayRequest+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */; };
 		3489E71821F8F6B0002FF7A9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71721F8F6B0002FF7A9 /* DataController.swift */; };
 		3489E71A21F92AA4002FF7A9 /* AddPrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71921F92AA4002FF7A9 /* AddPrayViewController.swift */; };
-		3489E71E21F971D6002FF7A9 /* PeoplePleadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71D21F971D6002FF7A9 /* PeoplePleadViewController.swift */; };
+		3489E71E21F971D6002FF7A9 /* PeoplePrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71D21F971D6002FF7A9 /* PeoplePrayViewController.swift */; };
 		348D62692220F59500D78E92 /* HalgheNewsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D62682220F59500D78E92 /* HalgheNewsClient.swift */; };
 		348D626B2220F6CB00D78E92 /* HalgheNewsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D626A2220F6CB00D78E92 /* HalgheNewsConstants.swift */; };
 		348D626D2220F7EF00D78E92 /* HalgheNewsConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D626C2220F7EF00D78E92 /* HalgheNewsConvenience.swift */; };
@@ -93,7 +93,7 @@
 		3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrayRequest+Extra.swift"; sourceTree = "<group>"; };
 		3489E71721F8F6B0002FF7A9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		3489E71921F92AA4002FF7A9 /* AddPrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPrayViewController.swift; sourceTree = "<group>"; };
-		3489E71D21F971D6002FF7A9 /* PeoplePleadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePleadViewController.swift; sourceTree = "<group>"; };
+		3489E71D21F971D6002FF7A9 /* PeoplePrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePrayViewController.swift; sourceTree = "<group>"; };
 		348D62682220F59500D78E92 /* HalgheNewsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalgheNewsClient.swift; sourceTree = "<group>"; };
 		348D626A2220F6CB00D78E92 /* HalgheNewsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalgheNewsConstants.swift; sourceTree = "<group>"; };
 		348D626C2220F7EF00D78E92 /* HalgheNewsConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalgheNewsConvenience.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 				34DF495521F23631000A442A /* TabViewController.swift */,
 				34DF495821F39593000A442A /* UserInfoViewController.swift */,
 				3489E71921F92AA4002FF7A9 /* AddPrayViewController.swift */,
-				3489E71D21F971D6002FF7A9 /* PeoplePleadViewController.swift */,
+				3489E71D21F971D6002FF7A9 /* PeoplePrayViewController.swift */,
 				3409438421FEC54F00720C49 /* UserPrayViewController.swift */,
 				349936332203F0EC00985F75 /* CardDetailViewController.swift */,
 				348D62702221946F00D78E92 /* NEWSViewController.swift */,
@@ -561,7 +561,7 @@
 				348D62692220F59500D78E92 /* HalgheNewsClient.swift in Sources */,
 				3499DD7B22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift in Sources */,
 				341A8401220E8088008BFD45 /* Constants.swift in Sources */,
-				3489E71E21F971D6002FF7A9 /* PeoplePleadViewController.swift in Sources */,
+				3489E71E21F971D6002FF7A9 /* PeoplePrayViewController.swift in Sources */,
 				342ADCDE2221D8C3007E8A49 /* ConnectionManager.swift in Sources */,
 				342ADCE02221D91A007E8A49 /* BaseViewController.swift in Sources */,
 				3489E71821F8F6B0002FF7A9 /* DataController.swift in Sources */,

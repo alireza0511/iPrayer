@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class PeoplePleadViewController: UICollectionViewController {
+class PeoplePrayViewController: UICollectionViewController {
     
     // 6
     var ref: DatabaseReference!
@@ -77,7 +77,7 @@ class PeoplePleadViewController: UICollectionViewController {
     }
     
 }
-extension PeoplePleadViewController {
+extension PeoplePrayViewController {
      override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
      return peoplePleads.count
      }

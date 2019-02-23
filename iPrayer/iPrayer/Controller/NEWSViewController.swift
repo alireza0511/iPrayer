@@ -27,10 +27,15 @@ class NEWSViewController: BaseViewController  {
         
         getNewsFunc()
         news_TableView.rowHeight = 220
+        
+       
     }
     
     private func getNewsFunc(){
-        self.showSpinner()
+        if ConnectionManager.shared.isNetworkAvailable == true {
+            self.showSpinner()
+        }
+        
         HalgheNewsClient.sharedInstance().getNewsInfo { (newsResults, error, success) in
             
             if success {
