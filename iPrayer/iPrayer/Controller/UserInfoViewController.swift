@@ -19,6 +19,8 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var txf_userType2: UITextField!
     @IBOutlet weak var btn_userData: UIButton!
     
+    // MARK: Properties
+    var keyboardOnScreen = false
     var genderPickerView: [String] = [String]()
     var userType1PickerView: [String] = [String]()
     var userType2PickerView: [String] = [String]()
@@ -31,7 +33,9 @@ class UserInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureUI()
+        subscribeToKeyboardNotifications()
+
         prepareTextField()
         creatPickerView()
         dissmissPickerView()
@@ -42,6 +46,12 @@ class UserInfoViewController: UIViewController {
         if isFirstLunch ?? false{
         btn_userData.setTitle("Confirm", for: .normal)
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        unsubscribeFromAllNotifications()
     }
     
     @IBAction func confirmUserInfo(_ sender: UIButton){
@@ -67,6 +77,76 @@ class UserInfoViewController: UIViewController {
         txf_userBirth.text = UserDefaults.standard.value(forKey: "userBirthDay") as? String
         txf_userType1.text = UserDefaults.standard.value(forKey: "userType1") as? String
         txf_userType2.text = UserDefaults.standard.value(forKey: "userType2") as? String
+    }
+
+    func configureUI() {
+        configureTextField(txf_Name)
+    }
+    func configureTextField(_ textField: UITextField) {
+        textField.delegate = self
+    }
+    func subscribeToKeyboardNotifications(){
+        
+        subscribeToNotification(UIResponder.keyboardWillShowNotification, selector: #selector(self.keyboardWillShow))
+        subscribeToNotification(UIResponder.keyboardWillHideNotification, selector: #selector(self.keyboardWillHide))
+        subscribeToNotification(UIResponder.keyboardDidShowNotification, selector: #selector(self.keyboardDidShow))
+        subscribeToNotification(UIResponder.keyboardDidHideNotification, selector: #selector(self.keyboardDidHide))
+    }
+    
+    func subscribeToNotification(_ notification: NSNotification.Name, selector: Selector) {
+        NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
+    }
+    
+    func unsubscribeFromAllNotifications() {
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+extension UserInfoViewController: UITextFieldDelegate{
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    private func keyboardHeight(_ notification: Notification) -> CGFloat {
+        let userInfo = (notification as NSNotification).userInfo
+        let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
+        return keyboardSize.cgRectValue.height
+    }
+    // MARK: Show/Hide Keyboard
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if !keyboardOnScreen {
+            view.frame.origin.y -= keyboardHeight(notification)/4
+        }
+    }
+    @objc func keyboardWillHide(_ notification: Notification) {
+        if keyboardOnScreen {
+            view.frame.origin.y += keyboardHeight(notification)/4
+        }
+    }
+    
+    @objc func keyboardDidShow(_ notification: Notification) {
+        keyboardOnScreen = true
+    }
+    
+    @objc func keyboardDidHide(_ notification: Notification) {
+        keyboardOnScreen = false
+    }
+    
+    private func resignIfFirstResponder(_ textField: UITextField) {
+        if textField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
+    }
+    
+    @IBAction func userDidTapView(_ sender: AnyObject){
+        resignIfFirstResponder(txf_Name)
+        resignIfFirstResponder(txf_userGender)
+        resignIfFirstResponder(txf_userBirth)
+        resignIfFirstResponder(txf_userType1)
+        resignIfFirstResponder(txf_userType2)
     }
 }
 

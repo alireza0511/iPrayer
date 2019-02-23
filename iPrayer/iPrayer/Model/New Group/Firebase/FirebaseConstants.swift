@@ -18,6 +18,8 @@ struct FirebaseConstants {
         static let userCommentAfter = "userCommentAfter"
         static let isPleadPublic = "isPleadPublic"
         static let pleadCreationDate = "pleadCreationDate"
+        static let userType = "userType"
+
     }
     
     struct MessageFields {

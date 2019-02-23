@@ -15,5 +15,5 @@ class PeoplePleadCollectionViewCell: UICollectionViewCell {
      @IBOutlet weak var lbl_PeoplePleadType: UILabel!
      @IBOutlet weak var lbl_PeopleFeelBefore: UILabel!
      @IBOutlet weak var lbl_PeopleFeelAfter: UILabel!
-     
+    @IBOutlet weak var lbl_userType: UILabel!
 }
