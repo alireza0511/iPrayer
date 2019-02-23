@@ -46,12 +46,16 @@ class PeoplePleadViewController: UICollectionViewController {
     }
     
     func configureDatabase() {
+        
         ref = Database.database().reference()
+        if ConnectionManager.shared.isNetworkAvailable == false {
+            showNoConnectionAlert()
+        } else {
         _refHandle = ref.child("UserPleads").observe(.childAdded) { (snapshot: DataSnapshot) in
             self.peoplePleads.append(snapshot)
             self.collectionView_people.insertItems(at: [IndexPath(row: self.peoplePleads.count - 1, section: 0)])
-            print("pppppppp" )
-            print(self.peoplePleads.count)
+            
+        }
         }
         
     }
@@ -64,8 +68,16 @@ class PeoplePleadViewController: UICollectionViewController {
         
     }
     
+    func showNoConnectionAlert() {
+        
+        let alertController = UIAlertController(title: nil, message: "No Network Connection Available", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
     
-    
+}
+extension PeoplePleadViewController {
      override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
      return peoplePleads.count
      }
@@ -78,30 +90,17 @@ class PeoplePleadViewController: UICollectionViewController {
         let pleads = pleadsSnapshot.value as! [String:Any]
         let name = pleads["userName"] as! String
         let ringType = pleads[FirebaseConstants.PleadFields.pleadType] as! String
-        let commentAfter = pleads[FirebaseConstants.PleadFields.userCommentAfter] as! String
-        let commentBefore = pleads[FirebaseConstants.PleadFields.userCommentBefore] as! String
+//        let commentAfter = pleads[FirebaseConstants.PleadFields.userCommentAfter] as! String
+//        let commentBefore = pleads[FirebaseConstants.PleadFields.userCommentBefore] as! String
         let feelAfter = pleads[FirebaseConstants.PleadFields.userFeelAfter] as! Int
         let feelBefore = pleads[FirebaseConstants.PleadFields.userFeelBefore] as! Int
         let userType = pleads[FirebaseConstants.PleadFields.userType] as! String
 
         cell.lbl_PeopleName.text = name
         cell.lbl_PeoplePleadType.text = ringType
-        cell.lbl_PeopleFeelBefore.text = feelingEmojiFunc(feelBefore)
-        cell.lbl_PeopleFeelAfter.text = feelingEmojiFunc(feelAfter)
+        cell.lbl_PeopleFeelBefore.text = SingletonClass.shared.feelingEmojiFunc(feelBefore)
+        cell.lbl_PeopleFeelAfter.text = SingletonClass.shared.feelingEmojiFunc(feelAfter)
         cell.lbl_userType.text = userType
-        
-     
-//     let userPlead = self.prayRequests[(indexPath as NSIndexPath).row]
-//     cell.lbl_test.text = String(userPlead.prayType)
-//
-//     cell.lbl_numUserInteraction.text = "2"
-//     cell.lbl_feelBefore.text = String(userPlead.feelingBefore)
-//     cell.lbl_feelAfter.text = String(userPlead.feelingAfter)
-     
-     
-     
-     
-     
      
      return cell
      }
@@ -117,40 +116,5 @@ class PeoplePleadViewController: UICollectionViewController {
         // Present the view controller using navigation
         navigationController!.pushViewController(vc, animated: true)
      }
-    
-    func halgheType(_ type: Int) -> String {
-        let halgheType = [10: "Ertebat Vije",11: "Faradarmani", 41: "+1", 42: "+2",
-                          44: "-1", 44: "-2",91: "defaei 1",92: "defaei 2",93: "defaei 3",94: "defaei 4",95: "defaei 5",]
-        return halgheType[type]!
-    }
-    
-    func feelingEmojiFunc(_ feel: Int) -> String {
-        switch feel {
-        case -5:
-            return String(UnicodeScalar(128545)!)
-        case -4:
-            return String(UnicodeScalar(128567)!)
-        case -3:
-            return String(UnicodeScalar(128557)!)
-        case -2:
-            return String(UnicodeScalar(128560)!)
-        case -1:
-            return String(UnicodeScalar(128542)!)
-        case 0:
-            return String(UnicodeScalar(128530)!)
-        case 1:
-            return String(UnicodeScalar(128528)!)
-        case 2:
-            return String(UnicodeScalar(128522)!)
-        case 3:
-            return String(UnicodeScalar(128513)!)
-        case 4:
-            return String(UnicodeScalar(128514)!)
-        case 5:
-            return String(UnicodeScalar(128519)!)
-        default:
-            return String(UnicodeScalar(128591)!)
-        }
-    }
      
 }
