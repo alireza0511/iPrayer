@@ -1,4 +1,4 @@
-# iPrayer
+# iPrayer (test branch is the main)
 
 This is my final project for the Udacity "iOS Developer Nanodegree" Program:
 
