@@ -29,7 +29,7 @@
 		3489E71621F6E0D5002FF7A9 /* PrayRequest+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */; };
 		3489E71821F8F6B0002FF7A9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71721F8F6B0002FF7A9 /* DataController.swift */; };
 		3489E71A21F92AA4002FF7A9 /* AddPrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71921F92AA4002FF7A9 /* AddPrayViewController.swift */; };
-		3489E71E21F971D6002FF7A9 /* PeoplePrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71D21F971D6002FF7A9 /* PeoplePrayViewController.swift */; };
+		3489E71E21F971D6002FF7A9 /* PeoplePracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71D21F971D6002FF7A9 /* PeoplePracticeViewController.swift */; };
 		348D62692220F59500D78E92 /* HalgheNewsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D62682220F59500D78E92 /* HalgheNewsClient.swift */; };
 		348D626B2220F6CB00D78E92 /* HalgheNewsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D626A2220F6CB00D78E92 /* HalgheNewsConstants.swift */; };
 		348D626D2220F7EF00D78E92 /* HalgheNewsConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D626C2220F7EF00D78E92 /* HalgheNewsConvenience.swift */; };
@@ -40,7 +40,6 @@
 		3499DD7921FF6B070037A00B /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499DD7821FF6B070037A00B /* FirebaseConstants.swift */; };
 		3499DD7B22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499DD7A22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift */; };
 		34C4327D21F05263000883E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34C4327C21F05262000883E2 /* GoogleService-Info.plist */; };
-		34DF495621F23631000A442A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DF495521F23631000A442A /* TabViewController.swift */; };
 		34DF495921F39593000A442A /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DF495821F39593000A442A /* UserInfoViewController.swift */; };
 		4F074C0E8BFAC089E45F12F9 /* Pods_iPrayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA525EA33DF4395EA41A8A8 /* Pods_iPrayer.framework */; };
 /* End PBXBuildFile section */
@@ -91,7 +90,7 @@
 		3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrayRequest+Extra.swift"; sourceTree = "<group>"; };
 		3489E71721F8F6B0002FF7A9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		3489E71921F92AA4002FF7A9 /* AddPrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPrayViewController.swift; sourceTree = "<group>"; };
-		3489E71D21F971D6002FF7A9 /* PeoplePrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePrayViewController.swift; sourceTree = "<group>"; };
+		3489E71D21F971D6002FF7A9 /* PeoplePracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePracticeViewController.swift; sourceTree = "<group>"; };
 		348D62682220F59500D78E92 /* HalgheNewsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalgheNewsClient.swift; sourceTree = "<group>"; };
 		348D626A2220F6CB00D78E92 /* HalgheNewsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalgheNewsConstants.swift; sourceTree = "<group>"; };
 		348D626C2220F7EF00D78E92 /* HalgheNewsConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalgheNewsConvenience.swift; sourceTree = "<group>"; };
@@ -102,7 +101,6 @@
 		3499DD7821FF6B070037A00B /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		3499DD7A22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePleadCollectionViewCell.swift; sourceTree = "<group>"; };
 		34C4327C21F05262000883E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		34DF495521F23631000A442A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		34DF495821F39593000A442A /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		6A3C901F0AF56A045942AFE3 /* Pods-iPrayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPrayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPrayer/Pods-iPrayer.release.xcconfig"; sourceTree = "<group>"; };
 		786935D4B0F4F6319C0944BE /* Pods-iPrayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPrayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPrayer/Pods-iPrayer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -264,10 +262,9 @@
 			isa = PBXGroup;
 			children = (
 				343863A221EFFD5A00EE129A /* SignInViewController.swift */,
-				34DF495521F23631000A442A /* TabViewController.swift */,
 				34DF495821F39593000A442A /* UserInfoViewController.swift */,
 				3489E71921F92AA4002FF7A9 /* AddPrayViewController.swift */,
-				3489E71D21F971D6002FF7A9 /* PeoplePrayViewController.swift */,
+				3489E71D21F971D6002FF7A9 /* PeoplePracticeViewController.swift */,
 				349936332203F0EC00985F75 /* CardDetailViewController.swift */,
 				348D62702221946F00D78E92 /* NEWSViewController.swift */,
 				342ADCD92221BED2007E8A49 /* DetailNewsViewController.swift */,
@@ -558,7 +555,7 @@
 				348D62692220F59500D78E92 /* HalgheNewsClient.swift in Sources */,
 				3499DD7B22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift in Sources */,
 				341A8401220E8088008BFD45 /* Constants.swift in Sources */,
-				3489E71E21F971D6002FF7A9 /* PeoplePrayViewController.swift in Sources */,
+				3489E71E21F971D6002FF7A9 /* PeoplePracticeViewController.swift in Sources */,
 				342ADCDE2221D8C3007E8A49 /* ConnectionManager.swift in Sources */,
 				342ADCE02221D91A007E8A49 /* BaseViewController.swift in Sources */,
 				3489E71821F8F6B0002FF7A9 /* DataController.swift in Sources */,
@@ -570,7 +567,6 @@
 				348D626D2220F7EF00D78E92 /* HalgheNewsConvenience.swift in Sources */,
 				342ADCDC2221D79A007E8A49 /* Reachability.swift in Sources */,
 				3489E71A21F92AA4002FF7A9 /* AddPrayViewController.swift in Sources */,
-				34DF495621F23631000A442A /* TabViewController.swift in Sources */,
 				343863A321EFFD5A00EE129A /* SignInViewController.swift in Sources */,
 				3421098F21FCCB8800C6B220 /* SingletonClass.swift in Sources */,
 				34DF495921F39593000A442A /* UserInfoViewController.swift in Sources */,
@@ -761,6 +757,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q386VYNM48;
 				INFOPLIST_FILE = iPrayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -780,6 +777,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q386VYNM48;
 				INFOPLIST_FILE = iPrayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

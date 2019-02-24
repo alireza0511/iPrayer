@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class PeoplePrayViewController: UICollectionViewController {
+class PeoplePracticeViewController: UICollectionViewController {
     
     // 6
     var ref: DatabaseReference!
@@ -19,11 +19,13 @@ class PeoplePrayViewController: UICollectionViewController {
     var user: User?
     var displayName = "Anonymous"
     fileprivate var _refHandle: DatabaseHandle!
+    var activityIndicator = UIActivityIndicatorView()
     
+    @IBOutlet weak var pb_peoplePractice: UIActivityIndicatorView!
     @IBOutlet var collectionView_people: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureAuth()
         
     }
@@ -37,11 +39,8 @@ class PeoplePrayViewController: UICollectionViewController {
         if (isSigned){
             
             configureDatabase()
-            /*
-             configureStorage()
-             */
+  
         } else {
-            // go to login page
         }
     }
     
@@ -51,22 +50,17 @@ class PeoplePrayViewController: UICollectionViewController {
         if ConnectionManager.shared.isNetworkAvailable == false {
             showNoConnectionAlert()
         } else {
-        _refHandle = ref.child("UserPleads").observe(.childAdded) { (snapshot: DataSnapshot) in
-            self.peoplePleads.append(snapshot)
-            self.collectionView_people.insertItems(at: [IndexPath(row: self.peoplePleads.count - 1, section: 0)])
-            
-        }
+            _refHandle = ref.child("UserPleads").observe(.childAdded) { (snapshot: DataSnapshot) in
+                self.peoplePleads.append(snapshot)
+                self.collectionView_people.insertItems(at: [IndexPath(row: self.peoplePleads.count - 1, section: 0)])
+                
+                self.activityIndicator.removeFromSuperview()
+                
+            }
         }
         
     }
-    
-    deinit {
-//        if let refferance = ref.child("UserPleads") as! Database {
-//            refferance.removeObserver(withHandle: _refHandle)
-//        }
-        //ref.child("UserPleads").removeObserver(withHandle: _refHandle)
-        
-    }
+
     
     func showNoConnectionAlert() {
         
@@ -77,34 +71,34 @@ class PeoplePrayViewController: UICollectionViewController {
     }
     
 }
-extension PeoplePrayViewController {
-     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-     return peoplePleads.count
-     }
+extension PeoplePracticeViewController {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return peoplePleads.count
+    }
     
-     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PeoplePleadsCell", for: indexPath) as! PeoplePleadCollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PeoplePleadsCell", for: indexPath) as! PeoplePleadCollectionViewCell
         
         let pleadsSnapshot: DataSnapshot! = peoplePleads[indexPath.row]
         
         let pleads = pleadsSnapshot.value as! [String:Any]
         let name = pleads["userName"] as! String
         let ringType = pleads[FirebaseConstants.PleadFields.pleadType] as! String
-//        let commentBefore = pleads[FirebaseConstants.PleadFields.userCommentBefore] as! String
+
         let feelBefore = pleads[FirebaseConstants.PleadFields.userFeelBefore] as! Int
         let userType = pleads[FirebaseConstants.PleadFields.userType] as! String
-
+        
         cell.lbl_PeopleName.text = name
         cell.lbl_PeoplePleadType.text = ringType
         cell.lbl_PeopleFeelBefore.text = SingletonClass.shared.feelingEmojiFunc(feelBefore)
         cell.lbl_PeopleFeelAfter.text = SingletonClass.shared.feelingEmojiFunc(11)
         cell.lbl_userType.text = userType
-     
-     return cell
-     }
+        
+        return cell
+    }
     
-     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-     print("selected item")
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selected item")
         // Grab the DetailVC from Storyboard
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "CardDetailView") as! CardDetailViewController
         //Populate view controller with data from the selected item
@@ -113,6 +107,6 @@ extension PeoplePrayViewController {
         
         // Present the view controller using navigation
         navigationController!.pushViewController(vc, animated: true)
-     }
-     
+    }
+    
 }

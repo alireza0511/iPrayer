@@ -25,12 +25,12 @@ class SignInViewController: UIViewController {
     var user: User?
     
     var dataController: DataController!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-            configureAuth()
+        configureAuth()
     }
-
+    
     func configureAuth() {
         let provider: [FUIAuthProvider] = [FUIGoogleAuth()]
         FUIAuth.defaultAuthUI()?.providers = provider
@@ -38,14 +38,14 @@ class SignInViewController: UIViewController {
             if let activeUser = user {
                 if self.user != activeUser {
                     self.user = activeUser
-                  
+                    
                     if let name = UserDefaults.standard.value(forKey: "userName") {
-                            print(name)
+                        print(name)
                     } else {
                         if let name = user!.displayName{
                             UserDefaults.standard.setValue(name, forKey: "userName")
-                            }
                         }
+                    }
                     
                     if let email = UserDefaults.standard.value(forKey: "userEmail"){
                         print(email)
@@ -75,7 +75,7 @@ class SignInViewController: UIViewController {
                         print(userPhoto)
                     } else {
                         if let userPhoto = user!.photoURL?.absoluteString {
-                        UserDefaults.standard.setValue(userPhoto, forKeyPath: "userPhoto")
+                            UserDefaults.standard.setValue(userPhoto, forKeyPath: "userPhoto")
                         }
                     }
                     
@@ -90,57 +90,44 @@ class SignInViewController: UIViewController {
     }
     
     func configureDatabase(){
-        //1.3
         ref = Database.database().reference()
         
     }
     func signedInStatus(isSignedIn: Bool){
-        /*
-         signInButton.isHidden = isSignedIn
-         signOutButton.isHidden = !isSignedIn
-         sendButton.isHidden = !isSignedIn
-         imageMessage.isHidden = !isSignedIn
-         */
         
         if (isSignedIn){
-                performSegue(withIdentifier: "segue_signInToTab", sender: self)
+            performSegue(withIdentifier: "segue_signInToTab", sender: self)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "segue_signInToTab" {
-//        let controller = segue.destination as! TabViewController
-//        }
+        
         if segue.identifier == "segue_signInToUser" {
             let controller = segue.destination as! UserInfoViewController
-                    controller.isFirstLunch = true
+            controller.isFirstLunch = true
         }
         
-
-        
-    }
-
-    @IBAction func showLoginPage(_ sender: Any) {
-
-        
-                  if (UserDefaults.standard.bool(forKey:  "hasLaunchedBefore")){
-                      performSegue(withIdentifier: "segue_signInToTab", sender: self)
-                      print("has lunch before")
-                  } else {
-                    UserDefaults.standard.setValue(true, forKey: "hasLaunchedBefore")
-                    
-
-                      self.performSegue(withIdentifier: "segue_signInToUser", sender: self)
-                      print("has not lunch before")
-                  }
     }
     
-
+    @IBAction func showLoginPage(_ sender: Any) {
+        
+        
+        if (UserDefaults.standard.bool(forKey:  "hasLaunchedBefore")){
+            performSegue(withIdentifier: "segue_signInToTab", sender: self)
+            print("has lunch before")
+        } else {
+            UserDefaults.standard.setValue(true, forKey: "hasLaunchedBefore")
+            
+            
+            self.performSegue(withIdentifier: "segue_signInToUser", sender: self)
+            print("has not lunch before")
+        }
+    }
     
     func loginSession() {
         let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
         self.present(authViewController, animated: true, completion: nil)
     }
-
+    
 }
 

@@ -29,13 +29,13 @@ class UserInfoViewController: UIViewController {
     let pickerView3 = UIPickerView()
     let datePicker = UIDatePicker()
     var isFirstLunch: Bool?
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         subscribeToKeyboardNotifications()
-
+        
         prepareTextField()
         creatPickerView()
         dissmissPickerView()
@@ -44,7 +44,7 @@ class UserInfoViewController: UIViewController {
         userType2PickerView = SingletonClass.shared.userType2
         
         if isFirstLunch ?? false{
-        btn_userData.setTitle("Confirm", for: .normal)
+            btn_userData.setTitle("Confirm", for: .normal)
         }
     }
     
@@ -57,19 +57,21 @@ class UserInfoViewController: UIViewController {
     @IBAction func confirmUserInfo(_ sender: UIButton){
         getUserInfoFunc()
         if isFirstLunch ?? false{
-        performSegue(withIdentifier: "segue_userToTab", sender: self)
+            performSegue(withIdentifier: "segue_userToTab", sender: self)
         }
     }
     
-       fileprivate func getUserInfoFunc() {
+    fileprivate func getUserInfoFunc() {
         UserDefaults.standard.setValue(txf_Name.text, forKey: "userName")
         UserDefaults.standard.setValue(txf_userGender.text, forKey: "userGender")
         UserDefaults.standard.setValue(txf_userBirth.text, forKey: "userBirthDay")
         UserDefaults.standard.setValue(txf_userType1.text, forKey: "userType1")
         UserDefaults.standard.setValue(txf_userType2.text, forKey: "userType2")
-    
+        
         // next step post data to database
-        }
+        _ = navigationController?.popViewController(animated: true)
+        
+    }
     
     func prepareTextField() {
         txf_Name.text = UserDefaults.standard.value(forKey: "userName") as? String
@@ -78,7 +80,7 @@ class UserInfoViewController: UIViewController {
         txf_userType1.text = UserDefaults.standard.value(forKey: "userType1") as? String
         txf_userType2.text = UserDefaults.standard.value(forKey: "userType2") as? String
     }
-
+    
     func configureUI() {
         configureTextField(txf_Name)
     }
@@ -175,7 +177,7 @@ extension UserInfoViewController: UIPickerViewDelegate, UIPickerViewDataSource{
         default:
             return userType2PickerView[row]
         }
-       
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -191,15 +193,15 @@ extension UserInfoViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     func creatPickerView(){
-       
+        
         pickerView1.delegate = self
         pickerView2.delegate = self
         pickerView3.delegate = self
-
+        
         txf_userGender.inputView = pickerView1
         txf_userType1.inputView = pickerView2
         txf_userType2.inputView = pickerView3
-
+        
         //Formate Date
         datePicker.datePickerMode = .date
         txf_userBirth.inputView = datePicker
@@ -216,7 +218,7 @@ extension UserInfoViewController: UIPickerViewDelegate, UIPickerViewDataSource{
         txf_userGender.inputAccessoryView = toolBar
         txf_userType1.inputAccessoryView = toolBar
         txf_userType2.inputAccessoryView = toolBar
-
+        
         // birthday ToolBar
         let toolbar2 = UIToolbar();
         toolbar2.sizeToFit()

@@ -13,7 +13,7 @@ import CoreData
 import Firebase
 
 class AddPrayViewController: UIViewController {
-   
+    
     
     // MARK: Properties
     var keyboardOnScreen = false
@@ -53,7 +53,7 @@ class AddPrayViewController: UIViewController {
         
         unsubscribeFromAllNotifications()
     }
- 
+    
     
     func configureAuth() {
         // check sign in
@@ -63,10 +63,7 @@ class AddPrayViewController: UIViewController {
     func signedInStatus(isSigned: Bool){
         if (isSigned){
             
-             configureDatabase()
-             /*
-             configureStorage()
-             */
+            configureDatabase()
         } else {
             // go to login page
         }
@@ -76,7 +73,7 @@ class AddPrayViewController: UIViewController {
         ref = Database.database().reference()
         _refHandle = ref.child("UserPleads").observe(.childAdded) { (snapshot: DataSnapshot) in
             self.userPleads.append(snapshot)
-           
+            
         }
     }
     
@@ -112,28 +109,26 @@ class AddPrayViewController: UIViewController {
         let userType = "\(UserDefaults.standard.value(forKey: "userType1") as? String ?? "Unspecific") \(UserDefaults.standard.value(forKey: "userType2") as? String ?? "user")"
         
         let data = [FirebaseConstants.PleadFields.pleadType: selectedPleadType ,FirebaseConstants.PleadFields.pleadCreationDate: myDate as String, FirebaseConstants.PleadFields.userCommentBefore: txf_comment.text as String, FirebaseConstants.PleadFields.userFeelBefore: Int(sBar_beforeFeel.value) as Int,FirebaseConstants.PleadFields.userType: userType as String] as [String : Any]
-
+        
         sendPleadToDatabase(data: data)
-            savePrayData()
-       
+        savePrayData()
+        
     }
     
     func sendPleadToDatabase(data: [String: Any]) {
         var mData = data
         mData["userName"] = UserDefaults.standard.value(forKey: "userName")
         
-        //ref.child("UserPleads").childByAutoId().setValue(mData)
-        
         let reference  = ref.child("UserPleads").childByAutoId()
         
         reference.setValue(mData)
         childAutoId = reference.key
-
+        
+        _ = navigationController?.popViewController(animated: true)
+        
     }
     @IBAction func addUserPleadAction(_ sender: Any) {
         presentNewPleadAlert()
-        
-        
     }
     
     func presentNewPleadAlert(){
@@ -158,7 +153,7 @@ extension AddPrayViewController: UITextViewDelegate{
     }
     
     func configureTextField(_ textField: UITextField) {
-     textField.delegate = self
+        textField.delegate = self
     }
     func configureTextField(_ textField: UITextView) {
         textField.delegate = self
@@ -180,7 +175,7 @@ extension AddPrayViewController: UITextViewDelegate{
 }
 
 extension AddPrayViewController: UITextFieldDelegate{
-
+    
     // MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -234,7 +229,7 @@ extension AddPrayViewController: UITextFieldDelegate{
 }
 
 extension AddPrayViewController: UIPickerViewDelegate, UIPickerViewDataSource{
-
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

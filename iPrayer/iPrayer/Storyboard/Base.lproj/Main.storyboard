@@ -197,10 +197,10 @@
             </objects>
             <point key="canvasLocation" x="1878" y="134"/>
         </scene>
-        <!--People Pray View Controller-->
+        <!--People Practice View Controller-->
         <scene sceneID="mMI-sH-Ffk">
             <objects>
-                <collectionViewController id="eIR-9D-eeu" customClass="PeoplePrayViewController" customModule="iPrayer" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="eIR-9D-eeu" customClass="PeoplePracticeViewController" customModule="iPrayer" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="YOL-dQ-fl2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,6 +211,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="eio-rf-xDN">
+                            <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PeoplePleadsCell" id="B6t-C8-oam" customClass="PeoplePleadCollectionViewCell" customModule="iPrayer" customModuleProvider="target">
                                 <rect key="frame" x="20.5" y="0.0" width="334" height="192"/>
@@ -281,6 +285,7 @@
                     <navigationItem key="navigationItem" id="i1Z-qz-eqG"/>
                     <connections>
                         <outlet property="collectionView_people" destination="YOL-dQ-fl2" id="zFN-4U-NFs"/>
+                        <outlet property="pb_peoplePractice" destination="eio-rf-xDN" id="fCh-wF-b2j"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Y7-V9-kdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,7 +569,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rie-NH-M4r" firstAttribute="leading" secondItem="fDP-V4-LWj" secondAttribute="leading" constant="12" id="2Mi-D3-4Md"/>
-                            <constraint firstItem="fDP-V4-LWj" firstAttribute="bottom" secondItem="yNs-9J-94b" secondAttribute="bottom" priority="250" constant="75" id="5Xd-xl-1JA"/>
                             <constraint firstItem="fDP-V4-LWj" firstAttribute="trailing" secondItem="yNs-9J-94b" secondAttribute="trailing" constant="24" id="ARo-69-son"/>
                             <constraint firstItem="rie-NH-M4r" firstAttribute="top" secondItem="2GK-UO-27A" secondAttribute="bottom" constant="20" id="Anm-AA-VRI"/>
                             <constraint firstItem="2GK-UO-27A" firstAttribute="leading" secondItem="fDP-V4-LWj" secondAttribute="leading" id="F4K-1Z-eq8"/>
@@ -574,6 +578,7 @@
                             <constraint firstItem="2Vt-h0-79k" firstAttribute="centerX" secondItem="fDP-V4-LWj" secondAttribute="centerX" id="SuC-d4-WB7"/>
                             <constraint firstItem="uAU-KT-1TZ" firstAttribute="leading" secondItem="fDP-V4-LWj" secondAttribute="leading" constant="24" id="T5Q-Tf-xLI"/>
                             <constraint firstItem="pSU-Wd-OzV" firstAttribute="leading" secondItem="fDP-V4-LWj" secondAttribute="leading" constant="12" id="V7Q-AR-BrJ"/>
+                            <constraint firstItem="pSU-Wd-OzV" firstAttribute="top" secondItem="yNs-9J-94b" secondAttribute="bottom" constant="12" id="ZBH-OU-f0Z"/>
                             <constraint firstItem="yNs-9J-94b" firstAttribute="top" secondItem="uAU-KT-1TZ" secondAttribute="bottom" constant="8" id="c4F-c3-ZTO"/>
                             <constraint firstItem="rie-NH-M4r" firstAttribute="centerX" secondItem="fDP-V4-LWj" secondAttribute="centerX" id="dWR-St-ptB"/>
                             <constraint firstItem="yNs-9J-94b" firstAttribute="leading" secondItem="fDP-V4-LWj" secondAttribute="leading" constant="24" id="e2T-kq-d9t"/>
@@ -612,7 +617,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ertebat Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzK-H0-WLd">
-                                <rect key="frame" x="20" y="44" width="103" height="21"/>
+                                <rect key="frame" x="20" y="88" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -630,19 +635,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is your current feeling?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj4-yx-Yb6">
-                                <rect key="frame" x="20" y="125.5" width="213" height="21"/>
+                                <rect key="frame" x="20" y="169.5" width="213" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I'm ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sEx-jG-zr2">
-                                <rect key="frame" x="20" y="257.5" width="335" height="299.5"/>
+                                <rect key="frame" x="20" y="301.5" width="335" height="255.5"/>
                                 <color key="backgroundColor" red="0.89852344409999996" green="0.89852344409999996" blue="0.89852344409999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RR-KV-qSV">
-                                <rect key="frame" x="328" y="121.5" width="27" height="29"/>
+                                <rect key="frame" x="328" y="165.5" width="27" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
