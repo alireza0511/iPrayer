@@ -1,6 +1,7 @@
 # iPrayer (test branch is the main)
 
 This is my final project for the Udacity "iOS Developer Nanodegree" Program:
+https://confirm.udacity.com/23ASE7CN
 
 # Table of Contents
 * [App Description](#description)<br />
