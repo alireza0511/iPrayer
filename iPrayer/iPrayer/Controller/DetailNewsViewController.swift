@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class DetailNewsViewController: UIViewController {
+class DetailNewsViewController: BaseViewController {
     
     var news: NewsStruct!
     var  link: String?
@@ -30,14 +30,16 @@ class DetailNewsViewController: UIViewController {
         link = news.link
         
         if let img = news.imgUrl {
-            print(img)
             let _ = HalgheNewsClient.sharedInstance().taskForGETImage(img) { (imageData, error) in
-                if let image = UIImage(data: imageData!){
-                    performUIUpdatesOnMain {
-                        self.iv_img.image = image
+                if let data = imageData{
+                    if let image = UIImage(data: data){
+                        performUIUpdatesOnMain {
+                            self.iv_img.image = image
+                        }
                     }
-                } else {
-                    print(error ?? "empty error")
+                }
+                 else {
+                    self.showConnectionResponseError(errorMessage: error ?? "error")
                 }
             }
         }

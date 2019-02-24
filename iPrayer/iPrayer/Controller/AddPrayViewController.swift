@@ -95,14 +95,9 @@ class AddPrayViewController: UIViewController {
         let userPlead = PrayRequest(context: dataController.viewContext)
         userPlead.prayType = selectedPleadType
         userPlead.creationDate = Date()
-        //userPlead.publicPlead = switch_public.isOn
         userPlead.feelingBefore = Int16(Int(sBar_beforeFeel.value))
         userPlead.commendBefore = txf_comment.text
-        userPlead.feelingAfter = 10
-        userPlead.commendAfter = "good"
         userPlead.dbKey = childAutoId
-        print("key save to CoreData")
-        print(childAutoId)
         
         try? dataController.viewContext.save()
     }
@@ -116,13 +111,11 @@ class AddPrayViewController: UIViewController {
         
         let userType = "\(UserDefaults.standard.value(forKey: "userType1") as? String ?? "Unspecific") \(UserDefaults.standard.value(forKey: "userType2") as? String ?? "user")"
         
-        let data = [FirebaseConstants.PleadFields.pleadType: selectedPleadType ,FirebaseConstants.PleadFields.pleadCreationDate: myDate as String, /* FirebaseConstants.PleadFields.isPleadPublic: switch_public.isOn as Bool,*/ FirebaseConstants.PleadFields.userCommentBefore: "bad" as String, FirebaseConstants.PleadFields.userFeelBefore: Int(sBar_beforeFeel.value) as Int, FirebaseConstants.PleadFields.userCommentAfter: txf_comment.text as String,FirebaseConstants.PleadFields.userType: userType as String, FirebaseConstants.PleadFields.userFeelAfter: 10 as Int] as [String : Any]
-        //if (switch_public.isOn){
-            sendPleadToDatabase(data: data)
+        let data = [FirebaseConstants.PleadFields.pleadType: selectedPleadType ,FirebaseConstants.PleadFields.pleadCreationDate: myDate as String, FirebaseConstants.PleadFields.userCommentBefore: txf_comment.text as String, FirebaseConstants.PleadFields.userFeelBefore: Int(sBar_beforeFeel.value) as Int,FirebaseConstants.PleadFields.userType: userType as String] as [String : Any]
+
+        sendPleadToDatabase(data: data)
             savePrayData()
-        //} else {
-         //   savePrayData()
-       // }
+       
     }
     
     func sendPleadToDatabase(data: [String: Any]) {
@@ -131,14 +124,11 @@ class AddPrayViewController: UIViewController {
         
         //ref.child("UserPleads").childByAutoId().setValue(mData)
         
-        var reference  = ref.child("UserPleads").childByAutoId()
+        let reference  = ref.child("UserPleads").childByAutoId()
         
         reference.setValue(mData)
         childAutoId = reference.key
-        print("final key lamasab")
-        print(childAutoId)
-        
-        
+
     }
     @IBAction func addUserPleadAction(_ sender: Any) {
         presentNewPleadAlert()

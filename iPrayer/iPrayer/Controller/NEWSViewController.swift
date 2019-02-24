@@ -69,7 +69,6 @@ extension NEWSViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(newsInfo.count)
         return newsInfo.count
     }
     

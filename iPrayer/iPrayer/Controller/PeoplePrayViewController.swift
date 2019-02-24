@@ -90,16 +90,14 @@ extension PeoplePrayViewController {
         let pleads = pleadsSnapshot.value as! [String:Any]
         let name = pleads["userName"] as! String
         let ringType = pleads[FirebaseConstants.PleadFields.pleadType] as! String
-//        let commentAfter = pleads[FirebaseConstants.PleadFields.userCommentAfter] as! String
 //        let commentBefore = pleads[FirebaseConstants.PleadFields.userCommentBefore] as! String
-        let feelAfter = pleads[FirebaseConstants.PleadFields.userFeelAfter] as! Int
         let feelBefore = pleads[FirebaseConstants.PleadFields.userFeelBefore] as! Int
         let userType = pleads[FirebaseConstants.PleadFields.userType] as! String
 
         cell.lbl_PeopleName.text = name
         cell.lbl_PeoplePleadType.text = ringType
         cell.lbl_PeopleFeelBefore.text = SingletonClass.shared.feelingEmojiFunc(feelBefore)
-        cell.lbl_PeopleFeelAfter.text = SingletonClass.shared.feelingEmojiFunc(feelAfter)
+        cell.lbl_PeopleFeelAfter.text = SingletonClass.shared.feelingEmojiFunc(11)
         cell.lbl_userType.text = userType
      
      return cell

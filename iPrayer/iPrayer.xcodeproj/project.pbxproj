@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3409438521FEC54F00720C49 /* UserPrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409438421FEC54F00720C49 /* UserPrayViewController.swift */; };
 		341A8401220E8088008BFD45 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341A8400220E8088008BFD45 /* Constants.swift */; };
 		3421098F21FCCB8800C6B220 /* SingletonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421098E21FCCB8800C6B220 /* SingletonClass.swift */; };
-		3421099121FEA94300C6B220 /* UserPleadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421099021FEA94300C6B220 /* UserPleadCollectionViewCell.swift */; };
-		3421099321FEC20800C6B220 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421099221FEC20800C6B220 /* TestCell.swift */; };
 		342ADCDA2221BED2007E8A49 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342ADCD92221BED2007E8A49 /* DetailNewsViewController.swift */; };
 		342ADCDC2221D79A007E8A49 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342ADCDB2221D79A007E8A49 /* Reachability.swift */; };
 		342ADCDE2221D8C3007E8A49 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342ADCDD2221D8C3007E8A49 /* ConnectionManager.swift */; };
@@ -27,6 +24,8 @@
 		343863B921EFFD5E00EE129A /* iPrayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343863B821EFFD5E00EE129A /* iPrayerTests.swift */; };
 		343863C421EFFD5E00EE129A /* iPrayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343863C321EFFD5E00EE129A /* iPrayerUITests.swift */; };
 		3441FBDB221BBFE700545B17 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3441FBDA221BBFE700545B17 /* GCDBlackBox.swift */; };
+		347B0ADC22221D5A00302108 /* UserPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347B0ADB22221D5A00302108 /* UserPracticeViewController.swift */; };
+		347B0ADE222220EF00302108 /* UserPracticeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347B0ADD222220EF00302108 /* UserPracticeViewCell.swift */; };
 		3489E71621F6E0D5002FF7A9 /* PrayRequest+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */; };
 		3489E71821F8F6B0002FF7A9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71721F8F6B0002FF7A9 /* DataController.swift */; };
 		3489E71A21F92AA4002FF7A9 /* AddPrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489E71921F92AA4002FF7A9 /* AddPrayViewController.swift */; };
@@ -64,11 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3409438421FEC54F00720C49 /* UserPrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrayViewController.swift; sourceTree = "<group>"; };
 		341A8400220E8088008BFD45 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3421098E21FCCB8800C6B220 /* SingletonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonClass.swift; sourceTree = "<group>"; };
-		3421099021FEA94300C6B220 /* UserPleadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPleadCollectionViewCell.swift; sourceTree = "<group>"; };
-		3421099221FEC20800C6B220 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
 		342ADCD92221BED2007E8A49 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
 		342ADCDB2221D79A007E8A49 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = ../../../../../../Desktop/Reachability.swift; sourceTree = "<group>"; };
 		342ADCDD2221D8C3007E8A49 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
@@ -90,6 +86,8 @@
 		343863C321EFFD5E00EE129A /* iPrayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPrayerUITests.swift; sourceTree = "<group>"; };
 		343863C521EFFD5E00EE129A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3441FBDA221BBFE700545B17 /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		347B0ADB22221D5A00302108 /* UserPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPracticeViewController.swift; sourceTree = "<group>"; };
+		347B0ADD222220EF00302108 /* UserPracticeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPracticeViewCell.swift; sourceTree = "<group>"; };
 		3489E71521F6E0D5002FF7A9 /* PrayRequest+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrayRequest+Extra.swift"; sourceTree = "<group>"; };
 		3489E71721F8F6B0002FF7A9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		3489E71921F92AA4002FF7A9 /* AddPrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPrayViewController.swift; sourceTree = "<group>"; };
@@ -270,11 +268,11 @@
 				34DF495821F39593000A442A /* UserInfoViewController.swift */,
 				3489E71921F92AA4002FF7A9 /* AddPrayViewController.swift */,
 				3489E71D21F971D6002FF7A9 /* PeoplePrayViewController.swift */,
-				3409438421FEC54F00720C49 /* UserPrayViewController.swift */,
 				349936332203F0EC00985F75 /* CardDetailViewController.swift */,
 				348D62702221946F00D78E92 /* NEWSViewController.swift */,
 				342ADCD92221BED2007E8A49 /* DetailNewsViewController.swift */,
 				342ADCDF2221D91A007E8A49 /* BaseViewController.swift */,
+				347B0ADB22221D5A00302108 /* UserPracticeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,11 +281,10 @@
 			isa = PBXGroup;
 			children = (
 				342ADCE32221DEA9007E8A49 /* ActivitySpinnerView.xib */,
-				3421099021FEA94300C6B220 /* UserPleadCollectionViewCell.swift */,
-				3421099221FEC20800C6B220 /* TestCell.swift */,
 				3499DD7A22000DCF0037A00B /* PeoplePleadCollectionViewCell.swift */,
 				348D62722221984800D78E92 /* NEWSTableViewCell.swift */,
 				342ADCE12221D9C9007E8A49 /* ActivitySpinner.swift */,
+				347B0ADD222220EF00302108 /* UserPracticeViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -565,13 +562,11 @@
 				342ADCDE2221D8C3007E8A49 /* ConnectionManager.swift in Sources */,
 				342ADCE02221D91A007E8A49 /* BaseViewController.swift in Sources */,
 				3489E71821F8F6B0002FF7A9 /* DataController.swift in Sources */,
-				3421099321FEC20800C6B220 /* TestCell.swift in Sources */,
 				3489E71621F6E0D5002FF7A9 /* PrayRequest+Extra.swift in Sources */,
 				349936342203F0EC00985F75 /* CardDetailViewController.swift in Sources */,
 				348D62712221946F00D78E92 /* NEWSViewController.swift in Sources */,
 				342ADCE22221D9C9007E8A49 /* ActivitySpinner.swift in Sources */,
 				3499DD7921FF6B070037A00B /* FirebaseConstants.swift in Sources */,
-				3421099121FEA94300C6B220 /* UserPleadCollectionViewCell.swift in Sources */,
 				348D626D2220F7EF00D78E92 /* HalgheNewsConvenience.swift in Sources */,
 				342ADCDC2221D79A007E8A49 /* Reachability.swift in Sources */,
 				3489E71A21F92AA4002FF7A9 /* AddPrayViewController.swift in Sources */,
@@ -584,8 +579,9 @@
 				348D62732221984800D78E92 /* NEWSTableViewCell.swift in Sources */,
 				343863A921EFFD5A00EE129A /* iPrayer.xcdatamodeld in Sources */,
 				343863A121EFFD5A00EE129A /* AppDelegate.swift in Sources */,
+				347B0ADE222220EF00302108 /* UserPracticeViewCell.swift in Sources */,
+				347B0ADC22221D5A00302108 /* UserPracticeViewController.swift in Sources */,
 				3441FBDB221BBFE700545B17 /* GCDBlackBox.swift in Sources */,
-				3409438521FEC54F00720C49 /* UserPrayViewController.swift in Sources */,
 				348D626F2220F88300D78E92 /* NewsStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
