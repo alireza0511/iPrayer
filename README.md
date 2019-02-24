@@ -5,8 +5,8 @@ This is my final project for the Udacity "iOS Developer Nanodegree" Program:
 # Table of Contents
 * [App Description](#description)<br />
 * [Project Details](#projectdetails)<br />
-* [Feature Wishlist](#features)
-
+* [Feature Wishlist](#features)<br />
+* [Build Instructions](#Instructions)<br />
 <a name="description">
 
 ## App Description
@@ -52,6 +52,8 @@ Also in the News tab bar users can see the latest News about the Halghe Mysticis
 * User Practice added to the Practice List are stored in Core Data
 * Choice of book sorting by creation date 
 
+<a name="features">
+  
 ## Feature Wishlist
 
 Some ideas for additional features:
@@ -66,3 +68,22 @@ Some ideas for additional features:
 * User can follow each other
 * iPad version
 * ...
+<a name="Instructions">
+  
+## Build Instructions
+
+CocoaPods is an iOS dependency manager or in everyday speak, a tool for incorporating code already written by others so that you don’t have to write everything from scratch. at this project I use:
+
+```bash
+pod 'Firebase/Storage'
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'Firebase/RemoteConfig'
+pod 'FirebaseUI'
+```
+To access the CocoaPods please instal Pod, Install the pods and open the .xcworkspace file to see the project in Xcode.
+```bash
+$ pod install
+$ open The-project.xcworkspace
+```
+please don't forget to Download the ```GoogleService-Info.plist``` file.
