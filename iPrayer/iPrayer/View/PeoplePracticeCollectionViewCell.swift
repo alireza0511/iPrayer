@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class PeoplePleadCollectionViewCell: UICollectionViewCell {
+class PeoplePracticeCollectionViewCell: UICollectionViewCell {
     
      @IBOutlet weak var lbl_PeopleName: UILabel!
    //  @IBOutlet weak var lbl_PeopleInteractionnum: UILabel!

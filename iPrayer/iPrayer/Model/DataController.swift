@@ -46,8 +46,8 @@ extension DataController{
         
         DispatchQueue.main.asyncAfter(deadline: .now() + interval) {
             self.autoSaveViewContext(interval: interval)
-            }
-}
+        }
+    }
 }
 
 

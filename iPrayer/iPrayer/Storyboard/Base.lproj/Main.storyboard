@@ -206,21 +206,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kEP-PP-VAw">
-                            <size key="itemSize" width="334" height="192"/>
+                            <size key="itemSize" width="309" height="157"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="eio-rf-xDN">
-                            <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </activityIndicatorView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PeoplePleadsCell" id="B6t-C8-oam" customClass="PeoplePleadCollectionViewCell" customModule="iPrayer" customModuleProvider="target">
-                                <rect key="frame" x="20.5" y="0.0" width="334" height="192"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PeoplePleadsCell" id="B6t-C8-oam" customClass="PeoplePracticeCollectionViewCell" customModule="iPrayer" customModuleProvider="target">
+                                <rect key="frame" x="33" y="0.0" width="309" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="334" height="192"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="309" height="157"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkN-W6-G0Z">
@@ -230,7 +226,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="feel before" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojt-27-w6R">
-                                            <rect key="frame" x="12" y="148" width="136" height="36"/>
+                                            <rect key="frame" x="12" y="113" width="136" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -242,13 +238,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pray" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNK-g5-Old">
-                                            <rect key="frame" x="258" y="143" width="64" height="41"/>
+                                            <rect key="frame" x="233" y="108" width="64" height="41"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsK-Yv-wPx">
-                                            <rect key="frame" x="250" y="22.5" width="64" height="17"/>
+                                            <rect key="frame" x="225" y="22.5" width="64" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -285,12 +281,11 @@
                     <navigationItem key="navigationItem" id="i1Z-qz-eqG"/>
                     <connections>
                         <outlet property="collectionView_people" destination="YOL-dQ-fl2" id="zFN-4U-NFs"/>
-                        <outlet property="pb_peoplePractice" destination="eio-rf-xDN" id="fCh-wF-b2j"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Y7-V9-kdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750" y="134"/>
+            <point key="canvasLocation" x="2749.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--Card Detail View Controller-->
         <scene sceneID="zgS-Iz-9R3">
@@ -547,13 +542,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAU-KT-1TZ">
-                                <rect key="frame" x="24" y="303.5" width="34.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="12" y="299.5" width="25.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSU-Wd-OzV">
-                                <rect key="frame" x="12" y="617" width="351" height="30"/>
+                                <rect key="frame" x="12" y="625" width="351" height="30"/>
                                 <state key="normal" title="Go To The Link"/>
                                 <connections>
                                     <action selector="actionLink:" destination="M4i-Sb-PQr" eventType="touchUpInside" id="5WG-yr-RBF"/>
@@ -572,11 +567,11 @@
                             <constraint firstItem="fDP-V4-LWj" firstAttribute="trailing" secondItem="yNs-9J-94b" secondAttribute="trailing" constant="24" id="ARo-69-son"/>
                             <constraint firstItem="rie-NH-M4r" firstAttribute="top" secondItem="2GK-UO-27A" secondAttribute="bottom" constant="20" id="Anm-AA-VRI"/>
                             <constraint firstItem="2GK-UO-27A" firstAttribute="leading" secondItem="fDP-V4-LWj" secondAttribute="leading" id="F4K-1Z-eq8"/>
-                            <constraint firstItem="fDP-V4-LWj" firstAttribute="bottom" secondItem="pSU-Wd-OzV" secondAttribute="bottom" constant="20" id="HhH-sR-58i"/>
+                            <constraint firstItem="fDP-V4-LWj" firstAttribute="bottom" secondItem="pSU-Wd-OzV" secondAttribute="bottom" constant="12" id="HhH-sR-58i"/>
                             <constraint firstItem="fDP-V4-LWj" firstAttribute="trailing" secondItem="rie-NH-M4r" secondAttribute="trailing" constant="12" id="Hxg-Ic-roy"/>
                             <constraint firstItem="2GK-UO-27A" firstAttribute="top" secondItem="fDP-V4-LWj" secondAttribute="top" id="Rfj-Oe-Ofv"/>
                             <constraint firstItem="2Vt-h0-79k" firstAttribute="centerX" secondItem="fDP-V4-LWj" secondAttribute="centerX" id="SuC-d4-WB7"/>
-                            <constraint firstItem="uAU-KT-1TZ" firstAttribute="leading" secondItem="fDP-V4-LWj" secondAttribute="leading" constant="24" id="T5Q-Tf-xLI"/>
+                            <constraint firstItem="uAU-KT-1TZ" firstAttribute="leading" secondItem="fDP-V4-LWj" secondAttribute="leading" constant="12" id="T5Q-Tf-xLI"/>
                             <constraint firstItem="pSU-Wd-OzV" firstAttribute="leading" secondItem="fDP-V4-LWj" secondAttribute="leading" constant="12" id="V7Q-AR-BrJ"/>
                             <constraint firstItem="pSU-Wd-OzV" firstAttribute="top" secondItem="yNs-9J-94b" secondAttribute="bottom" constant="12" id="ZBH-OU-f0Z"/>
                             <constraint firstItem="yNs-9J-94b" firstAttribute="top" secondItem="uAU-KT-1TZ" secondAttribute="bottom" constant="8" id="c4F-c3-ZTO"/>
@@ -584,7 +579,7 @@
                             <constraint firstItem="yNs-9J-94b" firstAttribute="leading" secondItem="fDP-V4-LWj" secondAttribute="leading" constant="24" id="e2T-kq-d9t"/>
                             <constraint firstItem="2Vt-h0-79k" firstAttribute="top" secondItem="rie-NH-M4r" secondAttribute="bottom" constant="12" id="j1F-yA-ew6"/>
                             <constraint firstItem="fDP-V4-LWj" firstAttribute="trailing" secondItem="pSU-Wd-OzV" secondAttribute="trailing" constant="12" id="nfH-xT-FF9"/>
-                            <constraint firstItem="uAU-KT-1TZ" firstAttribute="top" secondItem="2Vt-h0-79k" secondAttribute="bottom" constant="12" id="smx-Sa-chE"/>
+                            <constraint firstItem="uAU-KT-1TZ" firstAttribute="top" secondItem="2Vt-h0-79k" secondAttribute="bottom" constant="8" id="smx-Sa-chE"/>
                             <constraint firstItem="fDP-V4-LWj" firstAttribute="trailing" secondItem="2GK-UO-27A" secondAttribute="trailing" id="xhW-jg-R0l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fDP-V4-LWj"/>
@@ -600,10 +595,10 @@
             </objects>
             <point key="canvasLocation" x="2749.5999999999999" y="2333.8830584707648"/>
         </scene>
-        <!--Add Pray View Controller-->
+        <!--Add Practice View Controller-->
         <scene sceneID="bh7-CC-lOx">
             <objects>
-                <viewController id="wwl-aZ-iUs" customClass="AddPrayViewController" customModule="iPrayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wwl-aZ-iUs" customClass="AddPracticeViewController" customModule="iPrayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Klf-Nl-G8t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
